@@ -21,6 +21,14 @@ REGLAS INNEGOCIABLES:
 8. El teaser es UNA sola frase tipo gancho (no un resumen completo), máx. ~140 caracteres.
 9. El titular: claro y atractivo, sin clickbait engañoso, máx. ~90 caracteres.
 
+RELEVANCIA (filtro de tema): TecnoScroll SOLO publica tecnología de consumo:
+móviles, ordenadores/portátiles, cámaras, software/apps, coches y su tecnología
+(infoentretenimiento, conducción asistida, eléctricos), chips/procesadores, IA,
+gadgets, wearables y gaming. Si el artículo NO trata claramente de eso (p.ej.
+salud, política, medicina, turismo, deportes, economía general, cultura), marca
+"relevante": false y no te esfuerces en el resto de campos. Si sí es tecnología,
+marca "relevante": true y redáctalo con calidad.
+
 Clasifica el artículo en UNA categoría de esta lista (usa el identificador exacto):
 ${CATEGORY_SLUGS.join(', ')}.
 
@@ -32,6 +40,7 @@ const TOOL = {
   input_schema: {
     type: 'object',
     properties: {
+      relevante: { type: 'boolean', description: 'true si el artículo trata de tecnología de consumo; false si no (no se publicará).' },
       title: { type: 'string', description: 'Titular en español, máx ~90 caracteres.' },
       teaser: { type: 'string', description: 'Una frase gancho, máx ~140 caracteres.' },
       body: { type: 'string', description: 'Cuerpo original en español, Markdown, 150-300 palabras.' },
@@ -41,7 +50,7 @@ const TOOL = {
         description: '2-5 etiquetas cortas en minúscula (marcas, productos, temas).',
       },
     },
-    required: ['title', 'teaser', 'body', 'category'],
+    required: ['relevante', 'title', 'teaser', 'body', 'category'],
   },
 };
 

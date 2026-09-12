@@ -59,11 +59,21 @@ async function main() {
   }
 
   // 4) Reescritura + imagen + publicación (un fallo no detiene la tanda)
-  let ok = 0, failed = 0;
+  let ok = 0, failed = 0, skipped = 0;
   for (const item of batch) {
     try {
       log.info(`Procesando: ${item.title}`);
       const rewrite = await rewriteArticle(item);
+
+      // Filtro de tema: si no es tecnología, se descarta (y se marca para no repetir).
+      if (rewrite.relevante === false) {
+        markProcessed(processed, item, null);
+        saveProcessed(processed);
+        skipped++;
+        log.step(`descartado (no es tecnología): ${item.title}`);
+        continue;
+      }
+
       const image = await fetchImage({ title: rewrite.title, category: rewrite.category, tags: rewrite.tags });
       const slug = publishArticle({ item, rewrite, image });
       markProcessed(processed, item, slug);
@@ -78,7 +88,7 @@ async function main() {
   }
 
   console.log('');
-  log.ok(`Terminado. Publicados: ${ok} · Fallidos: ${failed}`);
+  log.ok(`Terminado. Publicados: ${ok} · Descartados (no tech): ${skipped} · Fallidos: ${failed}`);
 }
 
 main().catch((err) => {
