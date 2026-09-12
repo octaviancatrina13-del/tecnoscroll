@@ -156,7 +156,43 @@ const description =
     .empty h1{font-family:var(--anton);text-transform:uppercase;font-size:30px;}
     .empty code{background:#12151c;border:1px solid #232833;padding:3px 8px;border-radius:6px;font-size:14px;}
 
-    @media (max-height:720px){:root{--hd:56px;}.hl{font-size:clamp(25px,7vw,38px);line-height:1.16;margin-bottom:13px;}.tag{font-size:15px;margin-top:-18px;}.dek{font-size:clamp(15px,4.2vw,18px);}}
+    @media (max-height:720px) and (max-width:819px){:root{--hd:56px;}.hl{font-size:clamp(25px,7vw,38px);line-height:1.16;margin-bottom:13px;}.tag{font-size:15px;margin-top:-18px;}.dek{font-size:clamp(15px,4.2vw,18px);}}
+
+    /* ---------- DESKTOP: sitio a pantalla completa (sin marco de móvil) ---------- */
+    .topnav{display:none;}
+    @media (min-width:820px){
+      :root{--hd:66px;}
+      .app{max-width:none;box-shadow:none;}
+      .topbar{padding:0 34px;gap:22px;justify-content:flex-start;}
+      .burger{display:none;}
+      .menu{display:none!important;}
+      .logo{position:static;transform:none;}
+      .logo img{height:30px;}
+      .topnav{display:flex;align-items:center;gap:2px;margin-left:20px;overflow-x:auto;scrollbar-width:none;}
+      .topnav::-webkit-scrollbar{display:none;}
+      .topnav a{padding:7px 12px;border-radius:999px;font-size:14px;font-weight:600;color:#aeb6c4;white-space:nowrap;transition:color .15s,background .15s;}
+      .topnav a:hover{color:#fff;background:rgba(255,255,255,.08);}
+      .topnav a.active{color:#fff;background:var(--accent);}
+
+      /* Cada noticia ocupa toda la pantalla, imagen de fondo a sangre. */
+      .slide{padding-top:0;}
+      .shot{position:absolute;inset:0;flex:none;}
+      .fade{background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.05) 28%,rgba(0,0,0,.5) 68%,rgba(0,0,0,.92) 100%);}
+      .wm{transform:rotate(-6deg) scale(1.7);}
+      .breaking{position:absolute;top:var(--hd);left:0;right:0;z-index:6;padding:11px 34px;}
+      .breaking .marq{font-size:16px;}
+
+      /* Texto sobre la imagen, columna legible abajo a la izquierda. */
+      .caption{position:absolute;left:0;right:0;bottom:0;background:transparent;z-index:4;
+        padding:0 48px 58px;max-width:1000px;}
+      .tag{margin:0 0 18px;font-size:18px;padding:9px 17px;}
+      .hl{font-size:clamp(44px,4.6vw,78px);line-height:1.05;letter-spacing:.5px;max-width:20ch;margin-bottom:18px;
+        text-shadow:0 3px 18px rgba(0,0,0,.65);}
+      .dek{font-size:clamp(19px,1.5vw,26px);max-width:60ch;}
+      .meta{font-size:14px;margin-top:18px;}
+      .progress{right:16px;top:calc(var(--hd) + 22px);bottom:22px;width:5px;}
+      .hint{font-size:30px;bottom:18px;}
+    }
   </style>
 </head>
 <body>
@@ -166,6 +202,12 @@ const description =
       <a class="logo" href="/" aria-label="TecnoScroll.es">
         <img src="/logo-tecnoscroll.png" alt="TecnoScroll.es" />
       </a>
+      <nav class="topnav" aria-label="Categorías">
+        <a href="/" class="active">Todo</a>
+        {CATEGORIES.map((c) => (
+          <a href={`/categoria/${c.slug}`}>{c.label}</a>
+        ))}
+      </nav>
     </header>
 
     <nav class="menu" id="menu" hidden aria-label="Categorías">
