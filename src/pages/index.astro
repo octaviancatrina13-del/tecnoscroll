@@ -217,11 +217,19 @@ const description =
     }
 
     if (feed) {
+      // Evita que el navegador restaure el scroll de la ventana: lo gestionamos
+      // nosotros sobre el contenedor .feed (que es quien scrollea).
+      try { history.scrollRestoration = 'manual'; } catch (_) {}
+      const SKEY = 'ts_feed_index'; // índice de la noticia activa (para volver a ella)
+
       let nextPage = Number(feed.dataset.nextPage || '2');
       const totalPages = Number(feed.dataset.totalPages || '1');
       let loading = false;
       let done = nextPage > totalPages;
       let slides = Array.from(feed.querySelectorAll('.slide'));
+      let currentIndex = 0;
+
+      const saveIndex = () => { try { sessionStorage.setItem(SKEY, String(currentIndex)); } catch (_) {} };
 
       // ---- Progreso (barra lateral) ----
       function updateProgress() {
@@ -242,6 +250,8 @@ const description =
           e.target.classList.toggle('in', e.isIntersecting);
           if (e.isIntersecting) {
             const i = slides.indexOf(e.target);
+            currentIndex = i;
+            saveIndex();
             document.body.classList.toggle('scrolled', i > 0);
             if (!done && i >= slides.length - 2) loadNext();
           }
@@ -273,6 +283,39 @@ const description =
       }
 
       updateProgress();
+
+      // Guardar el índice también al salir (clic en una noticia, cerrar, etc.).
+      window.addEventListener('pagehide', saveIndex);
+      feed.addEventListener('click', (e) => { if (e.target.closest('.caption')) saveIndex(); });
+
+      // ---- Volver a la noticia que estabas viendo tras pulsar "atrás" ----
+      // Solo en navegación back/forward; una visita/recarga normal empieza arriba.
+      // Leemos el índice de forma SÍNCRONA (antes de que el observer lo sobrescriba
+      // con la diapositiva 0 al cargar) y restauramos tras el layout.
+      let navType;
+      try { navType = performance.getEntriesByType('navigation')[0]?.type; } catch (_) {}
+      let savedRaw = null;
+      try { savedRaw = sessionStorage.getItem(SKEY); } catch (_) {}
+      const wantIdx = savedRaw != null ? parseInt(savedRaw, 10) : NaN;
+
+      if (navType === 'back_forward' && Number.isFinite(wantIdx) && wantIdx > 0) {
+        const restore = async () => {
+          let guard = 0;
+          while (slides.length <= wantIdx && !done && guard++ < 40) {
+            await loadNext();
+          }
+          const target = slides[Math.min(wantIdx, slides.length - 1)];
+          if (!target) return;
+          target.classList.add('in');
+          document.body.classList.add('scrolled');
+          // Dos frames para que las alturas (100dvh) estén calculadas.
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            feed.scrollTop = target.offsetTop;
+            updateProgress();
+          }));
+        };
+        restore();
+      }
     }
   </script>
 </body>
