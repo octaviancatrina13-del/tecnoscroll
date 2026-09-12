@@ -1,4 +1,321 @@
 {
-  "ids": {},
-  "titles": {}
+  "ids": {
+    "9e2152d865f077ae": {
+      "slug": "trump-flexibiliza-normas-ambientales-para-acelerar-construccion-de-cen-9e2152",
+      "title": "Trump is giving data centers a pass to pollute",
+      "source": "theverge",
+      "at": "2026-09-12T14:59:33.038Z"
+    },
+    "07e30d1ae0c54331": {
+      "slug": "revolut-confirma-fuga-de-datos-tras-solicitudes-fraudulentas-07e30d",
+      "title": "Revolut confirms customer data breach through fake government requests",
+      "source": "techcrunch",
+      "at": "2026-09-12T14:59:38.366Z"
+    },
+    "7c774c32e94761fa": {
+      "slug": "polo-sur-o-ecuador-lunar-el-dilema-de-la-nasa-para-artemis-iv-7c774c",
+      "title": "La NASA quiere aterrizar en el polo sur lunar. El piloto de Artemis II dice que es una mala idea",
+      "source": "xataka",
+      "at": "2026-09-12T14:59:45.062Z"
+    },
+    "37574c39f7f86e18": {
+      "slug": "tokio-frena-los-pisos-turisticos-minpaku-ante-el-colapso-de-vecinos-37574c",
+      "title": "El turismo masivo ha disparado el número de pisos turísticos 'minpaku' en Japón. En Tokio ya han empezado a prohibirlos",
+      "source": "xataka",
+      "at": "2026-09-12T14:59:53.664Z"
+    },
+    "f55bca62da93c850": {
+      "slug": "baterias-gigantes-como-texas-resolvio-su-crisis-electrica-sin-apagones-f55bca",
+      "title": "Las baterías están empezando a revolucionar las redes eléctricas de muchos países: el ejemplo de Texas es solo el primero",
+      "source": "xataka",
+      "at": "2026-09-12T15:00:02.546Z"
+    },
+    "e4236b0d9e49a8eb": {
+      "slug": "sincronizacion-humana-lo-que-la-ciencia-confirma-cuando-compartes-tiem-e4236b",
+      "title": "Tu corazón, tus pupilas y hasta tus pasos: todo lo que de verdad se sincroniza cuando pasas tiempo con alguien",
+      "source": "xataka",
+      "at": "2026-09-12T15:00:10.794Z"
+    },
+    "96373668176f827d": {
+      "slug": "laika-sorprende-con-wildwood-su-nueva-apuesta-en-stop-motion-963736",
+      "title": "Laika’s stop-motion fantasy Wildwood looks so smooth",
+      "source": "theverge",
+      "at": "2026-09-12T15:00:18.239Z"
+    },
+    "5d3ce5fa88397bf2": {
+      "slug": "australia-regala-tres-horas-de-electricidad-al-dia-para-aprovechar-el-5d3ce5",
+      "title": "Australia regala tres horas de electricidad al día cuando sobra energía solar. Si España quiere lo mismo, hay algo que debe tener en cuenta",
+      "source": "xataka",
+      "at": "2026-09-12T15:00:26.972Z"
+    },
+    "ca98c7d781ebb858": {
+      "slug": "iphone-18-pro-y-pro-max-ya-disponibles-en-reserva-en-espana-ca98c7",
+      "title": "Los nuevos iPhone 18 Pro y 18 Pro Max ya se pueden reservar en España: dónde comprarlos hoy antes de que se agoten",
+      "source": "xataka",
+      "at": "2026-09-12T15:00:35.527Z"
+    },
+    "80dbe75910745f66": {
+      "slug": "cecotec-da-el-salto-a-la-construccion-aspirar-a-fabricar-6-000-casas-a-80dbe7",
+      "title": "De la Conga y la Mambo al ladrillo: Cecotec quiere fabricar 6.000 casas al año",
+      "source": "xataka",
+      "at": "2026-09-12T15:00:45.243Z"
+    },
+    "6ee7edd929a91c0f": {
+      "slug": "ya-puedes-reservar-el-iphone-18-pro-todos-los-detalles-de-la-preventa-6ee7ed",
+      "title": "Where to preorder the iPhone 18 Pro and Pro Max",
+      "source": "theverge",
+      "at": "2026-09-12T15:00:51.025Z"
+    },
+    "6d7588b9fd28ab88": {
+      "slug": "china-fabrica-en-masa-drones-cazadores-a-320-km-h-para-derribar-otros-6d7588",
+      "title": "La guerra de drones acaba de entrar en su fase más darwiniana: China está fabricando en masa un depredador que viaja a 320 km/h para cazarlos",
+      "source": "xataka",
+      "at": "2026-09-12T15:00:58.907Z"
+    },
+    "25a51bc30b95bb2e": {
+      "slug": "madrid-necesita-400-millones-para-salvar-la-m-30-de-su-colapso-25a51b",
+      "title": "Hace 20 años, Madrid se inventó un parque espectacular sobre la M-30. Ahora necesita invertir 400 millones para que no se caiga a cachos",
+      "source": "xataka",
+      "at": "2026-09-12T15:01:07.567Z"
+    },
+    "43166de57ac1e67a": {
+      "slug": "openai-sorprende-al-resolver-uno-de-los-grandes-retos-matematicos-43166d",
+      "title": "OpenAI just wants to win",
+      "source": "theverge",
+      "at": "2026-09-12T15:01:13.760Z"
+    },
+    "25956cd298f8699a": {
+      "slug": "el-faro-del-caballo-763-escalones-tallados-en-roca-y-un-cierre-que-gen-25956c",
+      "title": "El salto al mar más espectacular de Cantabria tiene 700 escalones de escalada y fueron tallados por los presos del penal del Dueso",
+      "source": "xataka",
+      "at": "2026-09-12T15:01:22.147Z"
+    },
+    "bb76f992632f18a9": {
+      "slug": "37-plantillas-gratuitas-de-horarios-escolares-para-canva-word-y-excel-bb76f9",
+      "title": "Plantillas de horario escolar para curso 2026/27: modelos para crear tus horarios de asignaturas en Canva, Word o Excel",
+      "source": "xataka",
+      "at": "2026-09-12T15:01:29.781Z"
+    },
+    "da0ff8cbb2d747f8": {
+      "slug": "antenas-moviles-flotantes-a-18-km-el-futuro-de-las-telecomunicaciones-da0ff8",
+      "title": "La próxima antena móvil quizá no esté en una torre. Puede estar flotando a 18 kilómetros de altura",
+      "source": "xataka",
+      "at": "2026-09-12T15:01:37.336Z"
+    },
+    "82ae7d1d6eed06c1": {
+      "slug": "el-exclusivo-club-de-los-multimillonarios-crece-4-000-personas-control-82ae7d",
+      "title": "El club más exclusivo del planeta sigue creciendo: 4.000 multimillonarios ya concentran 15 billones de dólares en riqueza",
+      "source": "xataka",
+      "at": "2026-09-12T15:01:46.677Z"
+    },
+    "bc132d4769509eee": {
+      "slug": "25-medallistas-fields-denuncian-la-ia-roba-resultados-antes-de-que-los-bc132d",
+      "title": "\"Una amenaza general al trabajo intelectual\": las mentes matemáticas más brillantes, contra el modus operandi de la IA",
+      "source": "xataka",
+      "at": "2026-09-12T15:01:55.143Z"
+    },
+    "3d15d11a733b6e25": {
+      "slug": "chollos-en-televisores-samsung-lg-y-sony-en-el-outlet-de-el-corte-ingl-3d15d1",
+      "title": "Liquidación de televisores en el outlet online de El Corte Inglés con modelos Samsung, LG y Sony",
+      "source": "xataka",
+      "at": "2026-09-12T15:02:02.853Z"
+    },
+    "b1ef672406af13ed": {
+      "slug": "un-mapa-revela-donde-el-turismo-abruma-a-los-residentes-en-europa-b1ef67",
+      "title": "El mapa que destapa la presión del turismo en Europa: el 10% del territorio ya suma más visitantes que residentes",
+      "source": "xataka",
+      "at": "2026-09-12T15:02:08.724Z"
+    },
+    "5f594d3b70a12588": {
+      "slug": "seis-anos-de-analisis-confirman-que-einstein-acerto-sobre-los-agujeros-5f594d",
+      "title": "Hemos dedicado seis años a procesar imágenes de un agujero negro para llegar a una conclusión: Einstein tenía razón",
+      "source": "xataka",
+      "at": "2026-09-12T15:02:16.512Z"
+    },
+    "ee7efa7bfbf0d012": {
+      "slug": "hoy-no-circula-del-12-de-septiembre-que-coches-pueden-circular-ee7efa",
+      "title": "Hoy No Circula sabatino: qué autos pueden circular y cuáles descansan el 12 de septiembre",
+      "source": "xataka",
+      "at": "2026-09-12T15:02:25.411Z"
+    },
+    "fad5f970d0508fcb": {
+      "slug": "mecka-ai-se-acerca-a-500-millones-en-su-nueva-ronda-liderada-por-sequo-fad5f9",
+      "title": "Mecka AI nears $500M valuation in Sequoia-led deal amid rush for robot training data",
+      "source": "techcrunch",
+      "at": "2026-09-12T15:02:31.725Z"
+    },
+    "ccfd05f69c6f8e19": {
+      "slug": "khosla-ventures-abre-su-primer-despacho-fuera-de-silicon-valley-ccfd05",
+      "title": "Khosla Ventures is opening a New York office this fall — its first outpost outside Sand Hill Road",
+      "source": "techcrunch",
+      "at": "2026-09-12T15:02:37.091Z"
+    },
+    "2619d8ade240d7f3": {
+      "slug": "garry-tan-impulsa-laboratorios-ia-estadounidenses-para-crear-modelos-a-2619d8",
+      "title": "Y Combinator’s Garry Tan wants US open-weight AI labs to ‘distill’ frontier models, too",
+      "source": "techcrunch",
+      "at": "2026-09-12T15:02:43.338Z"
+    },
+    "b3b4818aa362f288": {
+      "slug": "matematicos-en-pie-de-guerra-contra-openai-y-los-laboratorios-de-ia-b3b481",
+      "title": "OpenAI’s feud with mathematicians is only escalating",
+      "source": "techcrunch",
+      "at": "2026-09-12T15:02:49.496Z"
+    },
+    "eb3fa8e523801d75": {
+      "slug": "abogado-penalizado-por-usar-testigos-inventados-por-ia-en-un-caso-de-a-eb3fa8",
+      "title": "Lawyer fined $5K over AI-hallucinated witnesses in a murder case",
+      "source": "theverge",
+      "at": "2026-09-12T15:02:55.627Z"
+    },
+    "c9bc20e4988dc9cd": {
+      "slug": "ultimos-dias-para-reservar-tu-stand-en-techcrunch-disrupt-2026-c9bc20",
+      "title": "One week left to book your exhibit table at TechCrunch Disrupt 2026",
+      "source": "techcrunch",
+      "at": "2026-09-12T15:03:01.236Z"
+    },
+    "54bc95a279e46472": {
+      "slug": "ultima-oportunidad-para-participar-en-los-eventos-paralelos-de-techcru-54bc95",
+      "title": "Final, final, final call for TechCrunch Disrupt 2026 Side Events",
+      "source": "techcrunch",
+      "at": "2026-09-12T15:03:06.027Z"
+    },
+    "83e605502ca51c89": {
+      "slug": "moonshot-ai-aspira-a-alcanzar-2-000-millones-en-ingresos-anuales-83e605",
+      "title": "Kimi-maker Moonshot AI targets $2B in annual revenue",
+      "source": "techcrunch",
+      "at": "2026-09-12T15:03:12.275Z"
+    },
+    "dc14838b2fcabd77": {
+      "slug": "gog-recupera-las-cajas-de-carton-de-los-juegos-clasicos-en-formato-3d-dc1483",
+      "title": "Comprar un juego de PC antes también significaba tener una caja enorme en la estantería. GOG quiere recuperar eso",
+      "source": "xataka",
+      "at": "2026-09-12T15:03:19.124Z"
+    },
+    "79c39106891fd8bf": {
+      "slug": "construir-casas-en-marte-con-gelatina-y-levadura-en-lugar-de-ladrillos-79c391",
+      "title": "Necesitamos construir casas en Marte sin llevar ladrillos desde la Tierra: la solución que proponen unos científicos es gelatina y levadura",
+      "source": "xataka",
+      "at": "2026-09-12T15:03:27.078Z"
+    },
+    "e6be10aaed13329c": {
+      "slug": "roblox-facilita-crear-juegos-con-ia-y-jugarlos-fuera-de-su-plataforma-e6be10",
+      "title": "Roblox is making it easier to build games with AI — and play them outside Roblox",
+      "source": "techcrunch",
+      "at": "2026-09-12T15:03:32.527Z"
+    },
+    "e1545db42b16d9fa": {
+      "slug": "tres-startups-de-asia-central-se-perfilan-para-disrupt-2026-e1545d",
+      "title": "Central Eurasia names its 2026 Road to Battlefield winners: Cerberus, WeGlobal AI, and LOOQ",
+      "source": "techcrunch",
+      "at": "2026-09-12T15:03:38.996Z"
+    },
+    "14cf120805e08e86": {
+      "slug": "madrid-construye-un-gigantesco-parque-sobre-la-m-30-ya-al-70-de-obras-14cf12",
+      "title": "Madrid se ha empeñado en levantar un gigantesco parque encima de la M-30: con 16.370 metros cuadrados de jardín, ya está al 70%",
+      "source": "xataka",
+      "at": "2026-09-12T15:03:48.695Z"
+    },
+    "bf50c96f57d5c959": {
+      "slug": "en-china-los-tokens-de-ia-se-convierten-en-moneda-cotidiana-bf50c9",
+      "title": "En China los tokens de IA son los nuevos puntos de fidelización: te los regalan por comer, beber o usar una tarjeta",
+      "source": "xataka",
+      "at": "2026-09-12T15:03:56.782Z"
+    },
+    "c24dadcf774e7d17": {
+      "slug": "renfe-retira-seis-trenes-avril-en-madrid-valencia-por-problemas-de-vib-c24dad",
+      "title": "Renfe ya conoce el precio de dejar en manos de Talgo su futuro: 100.000 plazas menos en el Madrid-Valencia y más Avril parados",
+      "source": "xataka",
+      "at": "2026-09-12T15:04:04.145Z"
+    },
+    "0a00ea86dc7f105e": {
+      "slug": "matt-mullenweg-regresa-como-ceo-de-automattic-tras-dos-dias-de-baja-0a00ea",
+      "title": "Matt Mullenweg returns as Automattic CEO two days after getting booted",
+      "source": "theverge",
+      "at": "2026-09-12T15:04:10.420Z"
+    },
+    "8237f90b6acd5ccc": {
+      "slug": "pld-space-y-miura-9-la-apuesta-espanola-para-cohetes-reutilizables-8237f9",
+      "title": "PLD Space quiere poner a España al frente de la carrera europea por reutilizar cohetes. Su apuesta se llama MIURA 9",
+      "source": "xataka",
+      "at": "2026-09-12T15:04:19.210Z"
+    },
+    "b8f06fc0f83627df": {
+      "slug": "nscale-ficha-a-ejecutiva-de-openai-para-su-consejo-antes-de-posible-sa-b8f06f",
+      "title": "Nscale adds former OpenAI exec Fidji Simo to its board ahead of potential IPO",
+      "source": "techcrunch",
+      "at": "2026-09-12T15:04:25.834Z"
+    },
+    "f58aaf131ad407a3": {
+      "slug": "china-optimiza-las-baterias-lfp-sin-cambiar-su-quimica-y-alcanza-200-w-f58aaf",
+      "title": "China demuestra que no hace falta cambiar de química para mejorar las baterías de sus coches: llegan las baterías LFP de 200 Wh/kg",
+      "source": "xataka",
+      "at": "2026-09-12T15:04:34.551Z"
+    },
+    "04399cd0c7270f2b": {
+      "slug": "apple-sorprende-con-su-primer-movil-plegable-tras-decadas-de-espera-04399c",
+      "title": "We unfolded the iPhone Duo",
+      "source": "theverge",
+      "at": "2026-09-12T15:04:40.186Z"
+    },
+    "807d17a05b699239": {
+      "slug": "la-casa-blanca-asegura-que-truth-social-es-la-red-social-mas-poderosa-807d17",
+      "title": "The White House says Truth Social is the ‘most powerful and popular social media platform in the world’",
+      "source": "theverge",
+      "at": "2026-09-12T15:04:44.968Z"
+    },
+    "c16631faeaa3a10b": {
+      "slug": "el-sol-puede-lanzar-llamaradas-30-veces-mas-destructivas-de-lo-que-cre-c16631",
+      "title": "Creíamos que en 2003 ocurrió la peor llamarada solar posible. Un estudio dice que el Sol puede ser 30 veces más destructivo",
+      "source": "xataka",
+      "at": "2026-09-12T15:04:52.966Z"
+    }
+  },
+  "titles": {
+    "83d7dd2738758738": true,
+    "5af5d099ae976886": true,
+    "c5a00d8b503aea00": true,
+    "c57e457ee3434ed4": true,
+    "f71732c0766990e3": true,
+    "84b354c4e16ebbbe": true,
+    "0b6746bd94d70a0e": true,
+    "ccd7c3f62520d159": true,
+    "9bfd751e7d473341": true,
+    "7139258418e1cbf4": true,
+    "14b6a842b88588d2": true,
+    "75356532ab736a8e": true,
+    "586e13ced908086e": true,
+    "2f0d77d2e89aeb13": true,
+    "7663415f559c79de": true,
+    "c57a566a83954919": true,
+    "0a52c46d4a8e52da": true,
+    "0f9ce17ec1beb6a2": true,
+    "ed11586ab6719ed7": true,
+    "a3ced8ee1feb151d": true,
+    "1a0291a84737ae9c": true,
+    "072e49ab3b2f9d23": true,
+    "829cc93a05ce4347": true,
+    "918b11b2e94c0daf": true,
+    "440a2a92d06c30c3": true,
+    "b082f5699fc652b0": true,
+    "cd4d8eb7eb80c7a0": true,
+    "a9e30172f8bc0381": true,
+    "cd8ddd4a34eab441": true,
+    "fb712ce709d13afb": true,
+    "adb7aa056a9ba1a5": true,
+    "3ee4a4602eb5bed0": true,
+    "e12bfb15890f40b1": true,
+    "0b51ec46837cf6f6": true,
+    "c326817824548196": true,
+    "f8b2de37cf57a490": true,
+    "038dbd842cb06ef8": true,
+    "80cbf428f4d5ba92": true,
+    "0449c0021019fa9d": true,
+    "89396b940ba17958": true,
+    "0426bb21c8f1ee0f": true,
+    "9c88dd078082737d": true,
+    "fb1c52bb0f41be5f": true,
+    "5410be4d155a4169": true,
+    "8453604e3aa02b46": true
+  }
 }
