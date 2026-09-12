@@ -1,122 +1,41 @@
 {
-  "_comment": "Fuentes RSS. 'enabled: false' para desactivar sin borrar. Verifica cada feed al implementar: algunos cambian de URL o pasan a resumen parcial. 'weight' es orientativo para priorizar en caso de saturar MAX_ARTICLES_PER_RUN.",
+  "_comment": "Fuentes RSS. 'enabled:false' para desactivar. scope: 'oficial' = sala de prensa/blog oficial de una empresa (prioridad alta para anuncios de primera mano); 'internacional' y 'espana' = medios. weight orienta la prioridad. El pipeline limita cuántos artículos toma por fuente en cada tanda, para que el feed sea variado.",
   "sources": [
-    {
-      "id": "techcrunch",
-      "name": "TechCrunch",
-      "url": "https://techcrunch.com/feed/",
-      "lang": "en",
-      "scope": "internacional",
-      "weight": 5,
-      "enabled": true
-    },
-    {
-      "id": "theverge",
-      "name": "The Verge",
-      "url": "https://www.theverge.com/rss/index.xml",
-      "lang": "en",
-      "scope": "internacional",
-      "weight": 5,
-      "enabled": true
-    },
-    {
-      "id": "arstechnica",
-      "name": "Ars Technica",
-      "url": "https://feeds.arstechnica.com/arstechnica/index",
-      "lang": "en",
-      "scope": "internacional",
-      "weight": 4,
-      "enabled": true
-    },
-    {
-      "id": "engadget",
-      "name": "Engadget",
-      "url": "https://www.engadget.com/rss.xml",
-      "lang": "en",
-      "scope": "internacional",
-      "weight": 4,
-      "enabled": true
-    },
-    {
-      "id": "wired",
-      "name": "Wired",
-      "url": "https://www.wired.com/feed/rss",
-      "lang": "en",
-      "scope": "internacional",
-      "weight": 3,
-      "enabled": true
-    },
-    {
-      "id": "theregister",
-      "name": "The Register",
-      "url": "https://www.theregister.com/headlines.atom",
-      "lang": "en",
-      "scope": "internacional",
-      "weight": 3,
-      "enabled": true
-    },
-    {
-      "id": "restofworld",
-      "name": "Rest of World",
-      "url": "https://restofworld.org/feed/latest/",
-      "lang": "en",
-      "scope": "internacional",
-      "weight": 2,
-      "enabled": true
-    },
-    {
-      "id": "xataka",
-      "name": "Xataka",
-      "url": "https://www.xataka.com/index.xml",
-      "lang": "es",
-      "scope": "espana",
-      "weight": 5,
-      "enabled": true
-    },
-    {
-      "id": "genbeta",
-      "name": "Genbeta",
-      "url": "https://www.genbeta.com/index.xml",
-      "lang": "es",
-      "scope": "espana",
-      "weight": 3,
-      "enabled": true
-    },
-    {
-      "id": "hipertextual",
-      "name": "Hipertextual",
-      "url": "https://hipertextual.com/feed",
-      "lang": "es",
-      "scope": "espana",
-      "weight": 3,
-      "enabled": true
-    },
-    {
-      "id": "applesfera",
-      "name": "Applesfera",
-      "url": "https://www.applesfera.com/index.xml",
-      "lang": "es",
-      "scope": "espana",
-      "weight": 2,
-      "enabled": true
-    },
-    {
-      "id": "elandroidelibre",
-      "name": "El Androide Libre",
-      "url": "https://elandroidelibre.elespanol.com/feed",
-      "lang": "es",
-      "scope": "espana",
-      "weight": 2,
-      "enabled": true
-    },
-    {
-      "id": "computerhoy",
-      "name": "ComputerHoy",
-      "url": "https://computerhoy.com/rss",
-      "lang": "es",
-      "scope": "espana",
-      "weight": 2,
-      "enabled": true
-    }
+    { "id": "apple",       "name": "Apple Newsroom",     "url": "https://www.apple.com/newsroom/rss-feed.rss", "lang": "en", "scope": "oficial", "weight": 9, "enabled": true },
+    { "id": "google",      "name": "Google (The Keyword)","url": "https://blog.google/rss/",                    "lang": "en", "scope": "oficial", "weight": 9, "enabled": true },
+    { "id": "microsoft",   "name": "Microsoft",           "url": "https://blogs.microsoft.com/feed/",           "lang": "en", "scope": "oficial", "weight": 9, "enabled": true },
+    { "id": "nvidia",      "name": "NVIDIA Blog",         "url": "https://blogs.nvidia.com/feed/",              "lang": "en", "scope": "oficial", "weight": 9, "enabled": true },
+    { "id": "meta",        "name": "Meta",                "url": "https://about.fb.com/news/feed/",             "lang": "en", "scope": "oficial", "weight": 8, "enabled": true },
+    { "id": "samsung",     "name": "Samsung Newsroom",    "url": "https://news.samsung.com/global/feed",        "lang": "en", "scope": "oficial", "weight": 8, "enabled": true },
+    { "id": "intel",       "name": "Intel Newsroom",      "url": "https://newsroom.intel.com/feed",             "lang": "en", "scope": "oficial", "weight": 7, "enabled": true },
+    { "id": "openai",      "name": "OpenAI",              "url": "https://openai.com/blog/rss.xml",             "lang": "en", "scope": "oficial", "weight": 8, "enabled": true },
+    { "id": "aws",         "name": "AWS News",            "url": "https://aws.amazon.com/blogs/aws/feed/",      "lang": "en", "scope": "oficial", "weight": 6, "enabled": true },
+
+    { "id": "techcrunch",   "name": "TechCrunch",       "url": "https://techcrunch.com/feed/",                 "lang": "en", "scope": "internacional", "weight": 6, "enabled": true },
+    { "id": "theverge",     "name": "The Verge",        "url": "https://www.theverge.com/rss/index.xml",       "lang": "en", "scope": "internacional", "weight": 6, "enabled": true },
+    { "id": "arstechnica",  "name": "Ars Technica",     "url": "https://feeds.arstechnica.com/arstechnica/index","lang": "en", "scope": "internacional", "weight": 5, "enabled": true },
+    { "id": "engadget",     "name": "Engadget",         "url": "https://www.engadget.com/rss.xml",             "lang": "en", "scope": "internacional", "weight": 5, "enabled": true },
+    { "id": "wired",        "name": "Wired",            "url": "https://www.wired.com/feed/rss",               "lang": "en", "scope": "internacional", "weight": 4, "enabled": true },
+    { "id": "theregister",  "name": "The Register",     "url": "https://www.theregister.com/headlines.atom",   "lang": "en", "scope": "internacional", "weight": 4, "enabled": true },
+    { "id": "techradar",    "name": "TechRadar",        "url": "https://www.techradar.com/rss",                "lang": "en", "scope": "internacional", "weight": 4, "enabled": true },
+    { "id": "gizmodo",      "name": "Gizmodo",          "url": "https://gizmodo.com/rss",                      "lang": "en", "scope": "internacional", "weight": 4, "enabled": true },
+    { "id": "digitaltrends","name": "Digital Trends",   "url": "https://www.digitaltrends.com/feed/",          "lang": "en", "scope": "internacional", "weight": 4, "enabled": true },
+    { "id": "androidauth",  "name": "Android Authority","url": "https://www.androidauthority.com/feed/",       "lang": "en", "scope": "internacional", "weight": 4, "enabled": true },
+    { "id": "9to5mac",      "name": "9to5Mac",          "url": "https://9to5mac.com/feed/",                    "lang": "en", "scope": "internacional", "weight": 4, "enabled": true },
+    { "id": "9to5google",   "name": "9to5Google",       "url": "https://9to5google.com/feed/",                 "lang": "en", "scope": "internacional", "weight": 4, "enabled": true },
+    { "id": "macrumors",    "name": "MacRumors",        "url": "https://feeds.macrumors.com/MacRumors-All",    "lang": "en", "scope": "internacional", "weight": 4, "enabled": true },
+    { "id": "tomshardware", "name": "Tom's Hardware",   "url": "https://www.tomshardware.com/feeds/all",       "lang": "en", "scope": "internacional", "weight": 4, "enabled": true },
+    { "id": "venturebeat",  "name": "VentureBeat",      "url": "https://venturebeat.com/feed/",                "lang": "en", "scope": "internacional", "weight": 4, "enabled": true },
+    { "id": "androidpolice","name": "Android Police",   "url": "https://www.androidpolice.com/feed/",          "lang": "en", "scope": "internacional", "weight": 3, "enabled": true },
+    { "id": "gsmarena",     "name": "GSMArena",         "url": "https://www.gsmarena.com/rss-news-reviews.php3","lang": "en", "scope": "internacional", "weight": 3, "enabled": true },
+    { "id": "restofworld",  "name": "Rest of World",    "url": "https://restofworld.org/feed/latest/",         "lang": "en", "scope": "internacional", "weight": 3, "enabled": true },
+
+    { "id": "xataka",       "name": "Xataka",          "url": "https://www.xataka.com/index.xml",             "lang": "es", "scope": "espana", "weight": 6, "enabled": true },
+    { "id": "xatakamovil",  "name": "Xataka Móvil",    "url": "https://www.xatakamovil.com/index.xml",        "lang": "es", "scope": "espana", "weight": 5, "enabled": true },
+    { "id": "xatakandroid", "name": "Xataka Android",  "url": "https://www.xatakandroid.com/index.xml",       "lang": "es", "scope": "espana", "weight": 4, "enabled": true },
+    { "id": "genbeta",      "name": "Genbeta",         "url": "https://www.genbeta.com/index.xml",            "lang": "es", "scope": "espana", "weight": 4, "enabled": true },
+    { "id": "hipertextual", "name": "Hipertextual",    "url": "https://hipertextual.com/feed",                "lang": "es", "scope": "espana", "weight": 4, "enabled": true },
+    { "id": "applesfera",   "name": "Applesfera",      "url": "https://www.applesfera.com/index.xml",         "lang": "es", "scope": "espana", "weight": 3, "enabled": true },
+    { "id": "andro4all",    "name": "Andro4all",       "url": "https://andro4all.com/feed",                   "lang": "es", "scope": "espana", "weight": 3, "enabled": true }
   ]
 }

@@ -28,7 +28,7 @@ const cat = getCategory(d.category);
     <p class="article__teaser">{d.teaser}</p>
 
     <div class="article__meta">
-      <span>{d.source.name}</span>
+      <span>TecnoScroll</span>
       <span aria-hidden="true">·</span>
       <time datetime={d.pubDate.toISOString()} title={longDate(d.pubDate)}>
         {relativeTime(d.pubDate)}
@@ -46,13 +46,6 @@ const cat = getCategory(d.category);
 
     <div class="prose">
       <Content />
-    </div>
-
-    <div class="source-box">
-      Información basada en la cobertura de{' '}
-      <a href={d.source.url} rel="nofollow noopener" target="_blank">{d.source.name}</a>.
-      Artículo redactado de forma original por la redacción de TecnoScroll; las citas
-      textuales se atribuyen expresamente en el texto.
     </div>
   </article>
 </Layout>

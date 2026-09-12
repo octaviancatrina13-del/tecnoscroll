@@ -26,11 +26,26 @@ async function main() {
     fresh.push(item);
   }
 
-  // 3) Priorizar por peso de la fuente y recencia, y limitar por ejecución
-  fresh.sort((a, b) => b.weight - a.weight || new Date(b.pubDate) - new Date(a.pubDate));
-  const batch = fresh.slice(0, ENV.maxArticles);
+  // 3) Diversidad: limitar cuántos artículos entran por fuente en cada tanda,
+  //    para que el feed no lo dominen 2-3 sitios. Se conservan los más recientes
+  //    de cada fuente; luego se ordena por peso (oficiales primero) y recencia.
+  const PER_SOURCE_CAP = Number(process.env.PER_SOURCE_CAP || '5');
+  const perSource = new Map();
+  for (const it of fresh) {
+    const arr = perSource.get(it.source.id) || [];
+    arr.push(it);
+    perSource.set(it.source.id, arr);
+  }
+  const diversified = [];
+  for (const arr of perSource.values()) {
+    arr.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+    diversified.push(...arr.slice(0, PER_SOURCE_CAP));
+  }
+  diversified.sort((a, b) => b.weight - a.weight || new Date(b.pubDate) - new Date(a.pubDate));
+  const batch = diversified.slice(0, ENV.maxArticles);
 
-  log.ok(`Nuevos: ${fresh.length} · a procesar esta vez: ${batch.length} (límite ${ENV.maxArticles})`);
+  const fuentesEnLote = new Set(batch.map((b) => b.source.name)).size;
+  log.ok(`Nuevos: ${fresh.length} · a procesar: ${batch.length} de ${fuentesEnLote} fuentes distintas (máx ${PER_SOURCE_CAP}/fuente, límite ${ENV.maxArticles})`);
 
   if (DRY) {
     for (const it of batch) log.step(`[${it.source.name}] ${it.title}`);
