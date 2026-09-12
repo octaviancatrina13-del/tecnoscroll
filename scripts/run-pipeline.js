@@ -29,7 +29,7 @@ async function main() {
   // 3) Diversidad: limitar cuántos artículos entran por fuente en cada tanda,
   //    para que el feed no lo dominen 2-3 sitios. Se conservan los más recientes
   //    de cada fuente; luego se ordena por peso (oficiales primero) y recencia.
-  const PER_SOURCE_CAP = Number(process.env.PER_SOURCE_CAP || '5');
+  const PER_SOURCE_CAP = Number(process.env.PER_SOURCE_CAP || '3');
   const perSource = new Map();
   for (const it of fresh) {
     const arr = perSource.get(it.source.id) || [];

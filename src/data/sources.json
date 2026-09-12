@@ -7,7 +7,7 @@
     { "id": "nvidia",      "name": "NVIDIA Blog",         "url": "https://blogs.nvidia.com/feed/",              "lang": "en", "scope": "oficial", "weight": 9, "enabled": true },
     { "id": "meta",        "name": "Meta",                "url": "https://about.fb.com/news/feed/",             "lang": "en", "scope": "oficial", "weight": 8, "enabled": true },
     { "id": "samsung",     "name": "Samsung Newsroom",    "url": "https://news.samsung.com/global/feed",        "lang": "en", "scope": "oficial", "weight": 8, "enabled": true },
-    { "id": "intel",       "name": "Intel Newsroom",      "url": "https://newsroom.intel.com/feed",             "lang": "en", "scope": "oficial", "weight": 7, "enabled": true },
+    { "id": "intel",       "name": "Intel Newsroom",      "url": "https://newsroom.intel.com/feed",             "lang": "en", "scope": "oficial", "weight": 7, "enabled": false },
     { "id": "openai",      "name": "OpenAI",              "url": "https://openai.com/blog/rss.xml",             "lang": "en", "scope": "oficial", "weight": 8, "enabled": true },
     { "id": "aws",         "name": "AWS News",            "url": "https://aws.amazon.com/blogs/aws/feed/",      "lang": "en", "scope": "oficial", "weight": 6, "enabled": true },
 
