@@ -1,0 +1,83 @@
+---
+// Scroll infinito. La primera página se renderiza en el servidor (SEO);
+// esta isla carga las siguientes desde endpoints JSON estáticos generados
+// en /feed/... (ver src/pages/feed/).
+//
+// Props:
+//   feedBase  -> base del endpoint, p.ej. "/feed" o "/feed/moviles"
+//   startPage -> primera página a pedir por JS (normalmente 2)
+//   totalPages-> nº total de páginas (para saber cuándo parar)
+const { feedBase, startPage = 2, totalPages } = Astro.props;
+---
+<div
+  id="feed-more"
+  data-feed-base={feedBase}
+  data-next-page={startPage}
+  data-total-pages={totalPages}
+>
+</div>
+<div id="sentinel" aria-hidden="true"></div>
+<div class="loader" id="loader">
+  <span class="spinner"></span> Cargando más…
+</div>
+<p class="feed-end hidden" id="feed-end">Has llegado al final del flujo ⚡</p>
+
+<script>
+  import { cardHTML } from '../lib/articleCard.js';
+
+  const feed = document.querySelector('.feed');
+  const more = document.getElementById('feed-more');
+  const sentinel = document.getElementById('sentinel');
+  const loader = document.getElementById('loader');
+  const endMsg = document.getElementById('feed-end');
+
+  if (feed && more && sentinel) {
+    const base = more.dataset.feedBase;
+    const totalPages = Number(more.dataset.totalPages || '1');
+    let nextPage = Number(more.dataset.nextPage || '2');
+    let loading = false;
+    let done = nextPage > totalPages;
+
+    async function loadNext() {
+      if (loading || done) return;
+      loading = true;
+      loader.classList.remove('hidden');
+      try {
+        const res = await fetch(`${base}/${nextPage}.json`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const frag = document.createDocumentFragment();
+        for (const a of data.articles) {
+          const tpl = document.createElement('template');
+          tpl.innerHTML = cardHTML(a);
+          frag.appendChild(tpl.content.firstElementChild);
+        }
+        feed.appendChild(frag);
+        nextPage = data.nextPage;
+        if (!nextPage || nextPage > totalPages) finish();
+      } catch (err) {
+        console.error('[tecnoscroll] error cargando feed:', err);
+        // Reintento suave: permite volver a intentar al seguir haciendo scroll.
+      } finally {
+        loading = false;
+        if (!done) loader.classList.remove('hidden');
+      }
+    }
+
+    function finish() {
+      done = true;
+      loader.classList.add('hidden');
+      endMsg.classList.remove('hidden');
+      observer.disconnect();
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => { if (entries.some((e) => e.isIntersecting)) loadNext(); },
+      { rootMargin: '600px 0px' }
+    );
+
+    // Si ya no hay más páginas (p.ej. solo una), muestra el final; si no, observa.
+    if (done) finish();
+    else observer.observe(sentinel);
+  }
+</script>

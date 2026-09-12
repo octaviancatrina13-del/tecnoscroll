@@ -1,0 +1,75 @@
+---
+import '../styles/global.css';
+import { CATEGORIES } from '../lib/categories.js';
+
+const {
+  title = 'TecnoScroll — Noticias de tecnología',
+  description = 'Tecnología al día: móviles, ordenadores, chips, IA, coches y gadgets. Actualidad tech en español, en flujo continuo.',
+  image,
+  activeCategory,
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const year = new Date().getFullYear();
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TecnoScroll" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {image && <meta property="og:image" content={image} />}
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__row">
+        <a class="brand" href="/" aria-label="TecnoScroll.es">
+          <img class="brand__logo" src="/logo.svg" alt="" width="36" height="36" />
+          <span class="brand__name">tecnoscroll<em>.es</em></span>
+        </a>
+        <nav class="nav" aria-label="Categorías">
+          <a href="/" aria-current={!activeCategory ? 'page' : undefined}>Todo</a>
+          {CATEGORIES.map((c) => (
+            <a
+              href={`/categoria/${c.slug}`}
+              aria-current={activeCategory === c.slug ? 'page' : undefined}
+            >{c.label}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© {year} TecnoScroll · Noticias de tecnología en español</span>
+        <span>
+          Contenido reescrito de forma original · Imágenes con licencia
+          (<a href="https://unsplash.com" rel="nofollow noopener">Unsplash</a> /
+          <a href="https://www.pexels.com" rel="nofollow noopener">Pexels</a>)
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

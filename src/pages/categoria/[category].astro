@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import InfiniteScroll from '../../components/InfiniteScroll.astro';
+import { getPublishedArticles, toCardData, paginate, PAGE_SIZE } from '../../lib/feed.js';
+import { CATEGORIES, getCategory } from '../../lib/categories.js';
+
+export async function getStaticPaths() {
+  return CATEGORIES.map((c) => ({ params: { category: c.slug } }));
+}
+
+const { category } = Astro.params;
+const cat = getCategory(category);
+
+const articles = await getPublishedArticles(category);
+const cards = articles.map(toCardData);
+const pages = paginate(cards, PAGE_SIZE);
+const firstPage = pages[0];
+const totalPages = pages.length;
+const hasArticles = cards.length > 0;
+---
+<Layout
+  title={`${cat.label} — TecnoScroll`}
+  description={`Últimas noticias de ${cat.label.toLowerCase()} en TecnoScroll.`}
+  activeCategory={category}
+>
+  <div class="feed-head">
+    <h1>{cat.emoji} {cat.label}</h1>
+    <span class="live"><span class="dot"></span> En directo</span>
+  </div>
+
+  {hasArticles ? (
+    <>
+      <div class="feed">
+        {firstPage.map((a) => <ArticleCard article={a} />)}
+      </div>
+      <InfiniteScroll feedBase={`/feed/${category}`} startPage={2} totalPages={totalPages} />
+    </>
+  ) : (
+    <div class="empty">
+      <h2>Aún no hay artículos en {cat.label}</h2>
+      <p>Vuelve pronto: el feed se actualiza cada pocas horas.</p>
+    </div>
+  )}
+</Layout>

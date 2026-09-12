@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tecnoscroll.es/sitemap-index.xml

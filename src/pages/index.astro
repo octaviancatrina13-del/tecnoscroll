@@ -1,0 +1,279 @@
+---
+// ============================================================================
+// TecnoScroll — FEED (home, mobile-first, estilo tabloid vertical)
+// Feed a pantalla completa con scroll-snap: cada artículo ocupa un ecran.
+// Documento independiente (no usa Layout.astro, que es para las páginas de lectura).
+// La primera página se renderiza en el servidor (SEO); el scroll infinito añade más.
+// ============================================================================
+import { getPublishedArticles, toCardData, paginate, PAGE_SIZE } from '../lib/feed.js';
+import { slideHTML } from '../lib/slide.js';
+import { CATEGORIES } from '../lib/categories.js';
+
+const articles = await getPublishedArticles();
+const cards = articles.map(toCardData);
+const pages = paginate(cards, PAGE_SIZE);
+const firstPage = pages[0] ?? [];
+const totalPages = pages.length;
+const hasArticles = cards.length > 0;
+
+const ticker = cards.slice(0, 6).map((c) => c.title);
+const firstSlidesHTML = firstPage
+  .map((a, i) => slideHTML(a, i === 0 ? { lead: true, ticker } : {}))
+  .join('\n');
+
+const canonical = Astro.site ? new URL('/', Astro.site).href : '/';
+const description =
+  'Tecnología al día en flujo continuo: móviles, ordenadores, chips, IA, coches y gadgets. Actualidad tech en español.';
+---
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>TecnoScroll — Noticias de tecnología</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TecnoScroll" />
+  <meta property="og:title" content="TecnoScroll — Noticias de tecnología" />
+  <meta property="og:description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style is:global>
+    :root{
+      --accent:#1466ff;
+      --accent-2:#37b1ff;
+      --anton:'Anton',Impact,sans-serif;
+      --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+      --hd:64px;
+      --phone:480px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+    [hidden]{display:none!important;}
+    html,body{height:100%;background:#08090c;overflow:hidden;}
+    body{font-family:var(--sans);display:flex;justify-content:center;color:#fff;}
+    a{color:inherit;text-decoration:none;}
+    img{display:block;max-width:100%;}
+
+    .app{position:relative;width:100%;max-width:var(--phone);height:100vh;height:100dvh;
+      background:#000;overflow:hidden;box-shadow:0 0 80px rgba(0,0,0,.6);}
+
+    /* ---------- HEADER ---------- */
+    .topbar{position:absolute;top:0;left:0;right:0;z-index:60;height:var(--hd);
+      background:linear-gradient(#000,rgba(0,0,0,.86));display:flex;align-items:center;
+      justify-content:space-between;padding:0 14px;border-bottom:1px solid #14161c;}
+    .burger{display:flex;flex-direction:column;gap:5px;padding:8px 6px;cursor:pointer;background:none;border:0;}
+    .burger span{display:block;width:26px;height:3px;background:#fff;border-radius:2px;transition:.25s;}
+    .burger.is-open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+    .burger.is-open span:nth-child(2){opacity:0;}
+    .burger.is-open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+    .logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:block;}
+    .logo img{height:26px;width:auto;display:block;}
+    .live{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;
+      letter-spacing:1px;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.08);
+      border:1px solid #1c1f27;border-radius:999px;padding:6px 10px;}
+    .live .d{width:7px;height:7px;border-radius:50%;background:var(--accent);
+      box-shadow:0 0 0 0 rgba(20,102,255,.6);animation:pulse 2s infinite;}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(20,102,255,.55);}70%{box-shadow:0 0 0 8px transparent;}100%{box-shadow:0 0 0 0 transparent;}}
+
+    /* ---------- MENU (overlay de categorías) ---------- */
+    .menu{position:absolute;inset:var(--hd) 0 0;z-index:55;background:rgba(4,5,8,.98);
+      backdrop-filter:blur(6px);padding:22px 26px calc(30px + env(safe-area-inset-bottom));
+      display:flex;flex-direction:column;gap:2px;overflow-y:auto;}
+    .menu a{font-family:var(--anton);text-transform:uppercase;font-size:30px;letter-spacing:.5px;
+      color:#fff;padding:10px 0;border-bottom:1px solid #14161c;display:flex;align-items:center;gap:12px;}
+    .menu a:active{color:var(--accent-2);}
+    .menu a .em{font-size:24px;}
+
+    /* ---------- FEED ---------- */
+    .feed{height:100%;overflow-y:scroll;scroll-snap-type:y mandatory;
+      -webkit-overflow-scrolling:touch;overscroll-behavior-y:contain;scrollbar-width:none;}
+    .feed::-webkit-scrollbar{display:none;}
+
+    .slide{height:100vh;height:100dvh;scroll-snap-align:start;scroll-snap-stop:always;
+      display:flex;flex-direction:column;background:#000;position:relative;overflow:hidden;padding-top:var(--hd);}
+
+    /* ---------- BARRA "ÚLTIMA HORA" (solo lead) ---------- */
+    .breaking{background:linear-gradient(90deg,var(--accent),#0b3fd6);color:#fff;display:flex;
+      align-items:center;gap:12px;padding:9px 12px;overflow:hidden;}
+    .breaking .lbl{flex:0 0 auto;background:#000;color:#fff;font-family:var(--anton);
+      font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:13px;}
+    .breaking .track{flex:1;overflow:hidden;}
+    .breaking .marq{display:inline-block;white-space:nowrap;font-weight:700;font-size:14px;
+      animation:ticker 26s linear infinite;}
+    @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* ---------- IMAGEN ---------- */
+    .shot{position:relative;flex:1;min-height:0;overflow:hidden;background:#0c0f16;}
+    .shot .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;}
+    .abs{position:absolute;inset:0;}
+    .wm{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='120'><text x='0' y='72' font-family='Arial Black, Arial' font-weight='900' font-size='30' fill='rgba(20,102,255,0.13)' transform='skewX(-8)'>TECNOSCROLL</text></svg>");
+      background-repeat:repeat;transform:rotate(-6deg) scale(1.3);}
+    .fade{background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,.85) 88%,#000 100%);}
+
+    /* ---------- CAPTION ---------- */
+    .caption{background:#000;padding:0 18px calc(24px + env(safe-area-inset-bottom));position:relative;z-index:2;display:block;}
+    .tag{display:inline-flex;align-items:center;gap:6px;width:max-content;max-width:100%;
+      margin:-20px 0 14px;background:var(--accent);color:#fff;font-family:var(--anton);
+      font-size:16px;letter-spacing:.5px;text-transform:uppercase;padding:8px 15px;border-radius:6px;
+      box-shadow:0 8px 22px rgba(20,102,255,.4);}
+    .hl{font-family:var(--anton);color:#fff;text-transform:uppercase;
+      font-size:clamp(29px,7.8vw,44px);line-height:1.18;letter-spacing:.4px;margin-bottom:16px;
+      text-shadow:0 2px 6px rgba(0,0,0,.5);}
+    .dek{font-weight:600;font-size:clamp(16px,4.4vw,20px);line-height:1.42;color:#e8ebf0;}
+    .dek mark{color:#fff;padding:0 4px;border-radius:2px;
+      background:linear-gradient(var(--accent),var(--accent)) no-repeat;
+      background-size:100% 1.05em;background-position:0 52%;
+      -webkit-box-decoration-break:clone;box-decoration-break:clone;}
+    .meta{margin-top:14px;font-size:12px;letter-spacing:.4px;text-transform:uppercase;color:rgba(255,255,255,.55);}
+    .meta .src{color:var(--accent-2);font-weight:700;}
+
+    /* ---------- ANIMACIÓN DE ENTRADA ---------- */
+    .slide .tag,.slide .hl,.slide .dek,.slide .meta{opacity:0;transform:translateY(24px);}
+    .slide.in .tag {animation:rise .5s .05s cubic-bezier(.2,.7,.2,1) forwards;}
+    .slide.in .hl  {animation:rise .55s .16s cubic-bezier(.2,.7,.2,1) forwards;}
+    .slide.in .dek {animation:rise .55s .30s cubic-bezier(.2,.7,.2,1) forwards;}
+    .slide.in .meta{animation:rise .55s .42s cubic-bezier(.2,.7,.2,1) forwards;}
+    @keyframes rise{to{opacity:1;transform:translateY(0);}}
+    .slide .dek mark{background-size:0% 1.05em;}
+    .slide.in .dek mark{animation:grow 1.3s .8s cubic-bezier(.25,.6,.25,1) forwards;}
+    @keyframes grow{to{background-size:100% 1.05em;}}
+    @media (prefers-reduced-motion:reduce){
+      .slide .tag,.slide .hl,.slide .dek,.slide .meta{opacity:1;transform:none;animation:none;}
+      .slide .dek mark{background-size:100% 1.05em;animation:none;}
+    }
+
+    /* ---------- HINT + PROGRESO ---------- */
+    .hint{position:absolute;left:0;right:0;bottom:12px;text-align:center;z-index:5;font-size:24px;
+      color:rgba(255,255,255,.85);animation:bob 1.4s ease-in-out infinite;pointer-events:none;
+      text-shadow:0 2px 6px rgba(0,0,0,.6);transition:opacity .3s;}
+    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+    body.scrolled .hint{opacity:0;}
+    .progress{position:absolute;right:7px;top:calc(var(--hd) + 16px);bottom:16px;width:4px;z-index:45;
+      background:rgba(255,255,255,.12);border-radius:4px;overflow:hidden;}
+    .progress__thumb{display:block;width:100%;height:46px;border-radius:4px;
+      background:linear-gradient(var(--accent-2),var(--accent));will-change:transform;transition:transform .12s linear;}
+
+    /* ---------- VACÍO ---------- */
+    .empty{height:100%;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;
+      text-align:center;padding:30px;}
+    .empty h1{font-family:var(--anton);text-transform:uppercase;font-size:30px;}
+    .empty code{background:#12151c;border:1px solid #232833;padding:3px 8px;border-radius:6px;font-size:14px;}
+
+    @media (max-height:720px){:root{--hd:56px;}.hl{font-size:clamp(25px,7vw,38px);line-height:1.16;margin-bottom:13px;}.tag{font-size:15px;margin-top:-18px;}.dek{font-size:clamp(15px,4.2vw,18px);}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <button class="burger" id="burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a class="logo" href="/" aria-label="TecnoScroll.es">
+        <img src="/logo-tecnoscroll.png" alt="TecnoScroll.es" />
+      </a>
+      <span class="live"><span class="d"></span> En vivo</span>
+    </header>
+
+    <nav class="menu" id="menu" hidden aria-label="Categorías">
+      <a href="/">▚ Todo</a>
+      {CATEGORIES.map((c) => (
+        <a href={`/categoria/${c.slug}`}><span class="em">{c.emoji}</span> {c.label}</a>
+      ))}
+    </nav>
+
+    {hasArticles ? (
+      <>
+        <div class="progress"><span class="progress__thumb" id="thumb"></span></div>
+        <main class="feed" id="feed" data-next-page="2" data-total-pages={totalPages} set:html={firstSlidesHTML}></main>
+        <div class="hint" id="hint">﹀</div>
+      </>
+    ) : (
+      <div class="empty">
+        <h1>Todavía no hay noticias ⚡</h1>
+        <p>Ejecuta el pipeline para poblar el feed:</p>
+        <p><code>npm run pipeline</code></p>
+      </div>
+    )}
+  </div>
+
+  <script>
+    import { slideHTML } from '../lib/slide.js';
+
+    const feed = document.getElementById('feed');
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('menu');
+    const thumb = document.getElementById('thumb');
+
+    // ---- Menú de categorías ----
+    if (burger && menu) {
+      const toggle = (open) => {
+        menu.hidden = !open;
+        burger.classList.toggle('is-open', open);
+        burger.setAttribute('aria-expanded', String(open));
+      };
+      burger.addEventListener('click', () => toggle(menu.hidden));
+      menu.addEventListener('click', (e) => { if (e.target.closest('a')) toggle(false); });
+    }
+
+    if (feed) {
+      let nextPage = Number(feed.dataset.nextPage || '2');
+      const totalPages = Number(feed.dataset.totalPages || '1');
+      let loading = false;
+      let done = nextPage > totalPages;
+      let slides = Array.from(feed.querySelectorAll('.slide'));
+
+      // ---- Progreso (barra lateral) ----
+      function updateProgress() {
+        if (!thumb) return;
+        const max = feed.scrollHeight - feed.clientHeight;
+        const ratio = max > 0 ? feed.scrollTop / max : 0;
+        const track = thumb.parentElement.clientHeight - thumb.clientHeight;
+        thumb.style.transform = `translateY(${Math.max(0, ratio * track)}px)`;
+      }
+      let ticking = false;
+      feed.addEventListener('scroll', () => {
+        if (!ticking) { ticking = true; requestAnimationFrame(() => { updateProgress(); ticking = false; }); }
+      });
+
+      // ---- Diapositiva activa: animación de entrada + carga anticipada ----
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          e.target.classList.toggle('in', e.isIntersecting);
+          if (e.isIntersecting) {
+            const i = slides.indexOf(e.target);
+            document.body.classList.toggle('scrolled', i > 0);
+            if (!done && i >= slides.length - 2) loadNext();
+          }
+        });
+      }, { root: feed, threshold: 0.55 });
+      slides.forEach((s) => io.observe(s));
+
+      async function loadNext() {
+        if (loading || done) return;
+        loading = true;
+        try {
+          const res = await fetch(`/feed/${nextPage}.json`);
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          const data = await res.json();
+          const tpl = document.createElement('template');
+          tpl.innerHTML = data.articles.map((a) => slideHTML(a)).join('');
+          const added = Array.from(tpl.content.children);
+          feed.append(tpl.content);
+          added.forEach((s) => io.observe(s));
+          slides = Array.from(feed.querySelectorAll('.slide'));
+          nextPage = data.nextPage;
+          if (!nextPage || nextPage > totalPages) done = true;
+          updateProgress();
+        } catch (err) {
+          console.error('[tecnoscroll] feed:', err);
+        } finally {
+          loading = false;
+        }
+      }
+
+      updateProgress();
+    }
+  </script>
+</body>
+</html>

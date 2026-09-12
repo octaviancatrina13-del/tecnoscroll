@@ -1,0 +1,58 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { getCategory } from '../../lib/categories.js';
+import { longDate, relativeTime } from '../../lib/time.js';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles', ({ data }) => data.draft !== true);
+  return articles.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+const cat = getCategory(d.category);
+---
+<Layout
+  title={`${d.title} — TecnoScroll`}
+  description={d.teaser}
+  image={d.image.url}
+  activeCategory={d.category}
+>
+  <article class="article">
+    <a class="back-link" href="/">← Volver al feed</a>
+
+    <a class="article__kicker" href={`/categoria/${d.category}`}>{cat.emoji} {cat.label}</a>
+    <h1 class="article__title">{d.title}</h1>
+    <p class="article__teaser">{d.teaser}</p>
+
+    <div class="article__meta">
+      <span>{d.source.name}</span>
+      <span aria-hidden="true">·</span>
+      <time datetime={d.pubDate.toISOString()} title={longDate(d.pubDate)}>
+        {relativeTime(d.pubDate)}
+      </time>
+    </div>
+
+    <figure class="article__hero">
+      <img src={d.image.url} alt={d.image.alt} width="1280" height="720" />
+    </figure>
+    <p class="article__credit">
+      {d.image.creditUrl
+        ? <a href={d.image.creditUrl} rel="nofollow noopener">{d.image.credit}</a>
+        : d.image.credit}
+    </p>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <div class="source-box">
+      Información basada en la cobertura de{' '}
+      <a href={d.source.url} rel="nofollow noopener" target="_blank">{d.source.name}</a>.
+      Artículo redactado de forma original por la redacción de TecnoScroll; las citas
+      textuales se atribuyen expresamente en el texto.
+    </div>
+  </article>
+</Layout>

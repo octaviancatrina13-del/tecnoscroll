@@ -1,0 +1,21 @@
+# Configuración de despliegue en Netlify.
+# Auto-deploy en cada push a la rama principal (igual que acasalabrancus.ro).
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Cabeceras básicas de seguridad / caché para un sitio estático de noticias.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/fallback/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

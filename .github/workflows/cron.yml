@@ -1,0 +1,51 @@
+name: Actualizar feed de TecnoScroll
+
+on:
+  schedule:
+    # Cada 2 horas (UTC). Ajusta el cron si quieres otra frecuencia.
+    - cron: '0 */2 * * *'
+  workflow_dispatch: {} # permite lanzarlo a mano desde la pestaña Actions
+
+concurrency:
+  group: tecnoscroll-feed
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Ejecutar pipeline (fetch → reescritura → imagen → publicar)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ secrets.ANTHROPIC_MODEL }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          MAX_ARTICLES_PER_RUN: ${{ vars.MAX_ARTICLES_PER_RUN || '12' }}
+        run: npm run pipeline
+
+      - name: Commit y push de los artículos nuevos
+        run: |
+          git config user.name "tecnoscroll-bot"
+          git config user.email "bot@tecnoscroll.es"
+          git add src/content/articles data/processed.json
+          if git diff --staged --quiet; then
+            echo "Sin artículos nuevos; nada que commitear."
+          else
+            git commit -m "feed: nuevos artículos ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+            git push
+          fi

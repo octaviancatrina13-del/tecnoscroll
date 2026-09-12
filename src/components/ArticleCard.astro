@@ -1,0 +1,8 @@
+---
+import { cardHTML } from '../lib/articleCard.js';
+
+// Envoltorio fino: usa el mismo renderer que el cliente (src/lib/articleCard.js).
+const { article } = Astro.props;
+const html = cardHTML(article);
+---
+<Fragment set:html={html} />
