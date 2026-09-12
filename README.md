@@ -4,7 +4,7 @@ Sitio de **noticias de tecnología en español** para el público de España. Un
 
 - **Framework:** Astro (SSG)
 - **Hosting:** Netlify (auto-deploy en cada push)
-- **Automatización:** GitHub Actions (cron cada 2 h)
+- **Automatización:** GitHub Actions (cron cada 8 h)
 - **Reescritura:** API de Anthropic (Claude)
 - **Imágenes:** Unsplash → Pexels → reserva local por categoría
 
@@ -70,7 +70,7 @@ public/fallback/    imágenes de reserva por categoría
 
 1. Sube el repo a GitHub y conéctalo en Netlify (build `npm run build`, publish `dist` — ya está en `netlify.toml`).
 2. En **GitHub → Settings → Secrets and variables → Actions**, añade los *secrets*: `ANTHROPIC_API_KEY`, `UNSPLASH_ACCESS_KEY`, `PEXELS_API_KEY` (y opcional `ANTHROPIC_MODEL`). Como *variable*, `MAX_ARTICLES_PER_RUN`.
-3. El workflow `.github/workflows/cron.yml` se ejecuta cada 2 h (o a mano desde la pestaña **Actions**): genera artículos, hace commit y push → Netlify redepliega solo.
+3. El workflow `.github/workflows/cron.yml` se ejecuta cada 8 h (o a mano desde la pestaña **Actions**): genera artículos, hace commit y push → Netlify redepliega solo.
 
 ## Nota editorial y legal
 

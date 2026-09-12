@@ -2,8 +2,8 @@ name: Actualizar feed de TecnoScroll
 
 on:
   schedule:
-    # Cada 2 horas (UTC). Ajusta el cron si quieres otra frecuencia.
-    - cron: '0 */2 * * *'
+    # Cada 8 horas (UTC): 00:00, 08:00 y 16:00. Ajusta si quieres otra frecuencia.
+    - cron: '0 */8 * * *'
   workflow_dispatch: {} # permite lanzarlo a mano desde la pestaña Actions
 
 concurrency:
