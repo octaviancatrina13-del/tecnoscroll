@@ -52,5 +52,10 @@ jobs:
             echo "Sin artículos nuevos; nada que commitear."
           else
             git commit -m "feed: nuevos artículos ($(date -u +'%Y-%m-%d %H:%M UTC'))"
-            git push
+            # Integrar cualquier cambio remoto antes de empujar (evita el rechazo
+            # 'fetch first' si el repo avanzó mientras corría el pipeline).
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push reintento $i…"; sleep 5
+            done
           fi
