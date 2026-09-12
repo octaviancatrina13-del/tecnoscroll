@@ -32,11 +32,17 @@ async function fromUnsplash(query) {
   const data = await res.json();
   const p = data.results?.[0];
   if (!p) return null;
+  // Unsplash API Guidelines: registrar la "descarga" cuando se usa la foto.
+  try {
+    if (p.links?.download_location) {
+      await fetch(p.links.download_location, { headers: { Authorization: `Client-ID ${ENV.unsplashKey}` } });
+    }
+  } catch (_) { /* no bloquear por esto */ }
   return {
     url: p.urls.regular,
     alt: p.alt_description || query,
     credit: `Foto de ${p.user.name} en Unsplash`,
-    creditUrl: p.links.html,
+    creditUrl: `${p.links.html}?utm_source=tecnoscroll&utm_medium=referral`,
     provider: 'unsplash',
   };
 }

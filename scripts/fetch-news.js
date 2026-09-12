@@ -13,13 +13,30 @@ function loadSources() {
   return (raw.sources || []).filter((s) => s.enabled !== false);
 }
 
+/** Extrae el primer ID de vídeo de YouTube que aparezca en el HTML/enlaces del item. */
+function extractYouTubeId(...texts) {
+  const hay = texts.filter(Boolean).join(' ');
+  const m = hay.match(
+    /(?:youtube(?:-nocookie)?\.com\/(?:watch\?(?:[^"'\s]*&)?v=|embed\/|v\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/
+  );
+  return m ? m[1] : null;
+}
+
 /** Convierte un item de RSS al formato interno del pipeline. */
 function toItem(item, source) {
   const link = (item.link || item.guid || '').trim();
   const title = (item.title || '').trim();
-  const bodyRaw =
-    item['content:encoded'] || item.content || item.summary || item.contentSnippet || '';
+  const contentHtml = item['content:encoded'] || item.content || '';
+  const bodyRaw = contentHtml || item.summary || item.contentSnippet || '';
+  const ytId = extractYouTubeId(
+    contentHtml,
+    item.summary,
+    item.contentSnippet,
+    item.enclosure?.url,
+    item['media:group']?.['media:content']?.url
+  );
   return {
+    video: ytId ? { type: 'youtube', id: ytId } : null,
     id: hashKey(link || normalizeTitle(title)),
     titleKey: hashKey(normalizeTitle(title)),
     title,

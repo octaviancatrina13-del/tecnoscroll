@@ -51,6 +51,9 @@ function buildFrontmatter({ rewrite, image, item, slug }) {
     'source:',
     `  name: ${yamlStr(item.source.name)}`,
     `  url: ${yamlStr(item.link)}`,
+    ...(item.video && item.video.id
+      ? ['video:', `  type: ${yamlStr(item.video.type)}`, `  id: ${yamlStr(item.video.id)}`]
+      : []),
     `tags: [${(rewrite.tags || []).map(yamlStr).join(', ')}]`,
     'draft: false',
     '---',

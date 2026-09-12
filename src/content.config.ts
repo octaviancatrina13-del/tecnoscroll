@@ -31,6 +31,15 @@ const articles = defineCollection({
       url: z.string().url(),
     }),
 
+    // Vídeo incrustado opcional (p.ej. un vídeo oficial de YouTube de la empresa).
+    video: z
+      .object({
+        type: z.literal('youtube'),
+        id: z.string(),
+      })
+      .nullable()
+      .optional(),
+
     // Etiquetas opcionales para SEO / relacionados.
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
