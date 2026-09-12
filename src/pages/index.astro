@@ -71,12 +71,6 @@ const description =
     .burger.is-open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
     .logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:block;}
     .logo img{height:26px;width:auto;display:block;}
-    .live{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;
-      letter-spacing:1px;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.08);
-      border:1px solid #1c1f27;border-radius:999px;padding:6px 10px;}
-    .live .d{width:7px;height:7px;border-radius:50%;background:var(--accent);
-      box-shadow:0 0 0 0 rgba(20,102,255,.6);animation:pulse 2s infinite;}
-    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(20,102,255,.55);}70%{box-shadow:0 0 0 8px transparent;}100%{box-shadow:0 0 0 0 transparent;}}
 
     /* ---------- MENU (overlay de categorías) ---------- */
     .menu{position:absolute;inset:var(--hd) 0 0;z-index:55;background:rgba(4,5,8,.98);
@@ -172,7 +166,6 @@ const description =
       <a class="logo" href="/" aria-label="TecnoScroll.es">
         <img src="/logo-tecnoscroll.png" alt="TecnoScroll.es" />
       </a>
-      <span class="live"><span class="d"></span> En vivo</span>
     </header>
 
     <nav class="menu" id="menu" hidden aria-label="Categorías">
