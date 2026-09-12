@@ -91,7 +91,9 @@ async function main() {
   log.ok(`Terminado. Publicados: ${ok} · Descartados (no tech): ${skipped} · Fallidos: ${failed}`);
 }
 
-main().catch((err) => {
-  log.err(err.stack || err.message);
-  process.exit(1);
-});
+main()
+  .then(() => process.exit(0)) // cerrar ya, aunque queden sockets keep-alive abiertos
+  .catch((err) => {
+    log.err(err.stack || err.message);
+    process.exit(1);
+  });

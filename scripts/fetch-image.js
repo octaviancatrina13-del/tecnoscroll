@@ -86,7 +86,7 @@ export async function fetchImage(article) {
 
   for (const [name, fn] of [['Unsplash', fromUnsplash], ['Pexels', fromPexels]]) {
     try {
-      const img = await withRetry(() => fn(query), { retries: 1, baseMs: 1200, label: name });
+      const img = await withRetry(() => fn(query), { retries: 0, label: name });
       if (img) {
         log.step(`imagen (${img.provider}): "${query}"`);
         return img;
