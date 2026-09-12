@@ -1,4 +1,426 @@
 {
-  "ids": {},
-  "titles": {}
+  "ids": {
+    "b02935b93b58d1e0": {
+      "slug": "el-iphone-18-pro-ya-esta-disponible-para-reservar-b02935",
+      "title": "Get ready to experience iPhone 18 Pro, the new Apple Watch lineup, and AirPods 5",
+      "source": "apple",
+      "at": "2026-09-12T17:28:59.506Z"
+    },
+    "4ebec9300c906ed7": {
+      "slug": "google-impulsa-tres-proyectos-creativos-en-venecia-con-tecnologia-e-ia-4ebec9",
+      "title": "Three Google supported projects premiere during the 83rd Venice International Film Festival.",
+      "source": "google",
+      "at": "2026-09-12T17:29:04.489Z"
+    },
+    "4357e1518359a7e7": {
+      "slug": "google-dreambeans-llega-a-todos-los-usuarios-en-ee-uu-4357e1",
+      "title": "Dreambeans: Daily stories, brewed just for you, now available to all accounts in the U.S.",
+      "source": "google",
+      "at": "2026-09-12T17:29:10.582Z"
+    },
+    "683b94332d9bd7b4": {
+      "slug": "robots-que-aprenden-una-tarea-nueva-viendo-un-solo-video-683b94",
+      "title": "Skild AI Taps NVIDIA Physical AI to Teach Robots New Tasks From a Single Video",
+      "source": "nvidia",
+      "at": "2026-09-12T17:29:18.907Z"
+    },
+    "1adb809c884f2eb4": {
+      "slug": "el-futuro-de-los-robotaxis-como-nvidia-impulsa-el-transporte-sin-condu-1adb80",
+      "title": "Physical AI Takes the Wheel: How the World’s Robotaxi Leaders Are Building With NVIDIA Technologies",
+      "source": "nvidia",
+      "at": "2026-09-12T17:29:27.133Z"
+    },
+    "1852061b5cf6950b": {
+      "slug": null,
+      "title": "3 ways to prep for your next big race with Search",
+      "source": "google",
+      "at": "2026-09-12T17:29:31.291Z"
+    },
+    "ed5ac5e67af59a59": {
+      "slug": "d-matrix-integra-sus-chips-raptor-xpu-en-la-plataforma-ia-de-nvidia-ed5ac5",
+      "title": "d-Matrix Adopts NVIDIA NVLink Fusion for Rack-Scale XPU Deployment",
+      "source": "nvidia",
+      "at": "2026-09-12T17:29:38.221Z"
+    },
+    "728bbee10ddb2013": {
+      "slug": "apple-presenta-el-iphone-duo-su-primer-movil-plegable-728bbe",
+      "title": "Apple unveils iPhone Duo",
+      "source": "apple",
+      "at": "2026-09-12T17:29:43.339Z"
+    },
+    "cf4adf6d71020800": {
+      "slug": "apple-potencia-la-salud-y-el-deporte-con-inteligencia-artificial-cf4adf",
+      "title": "Apple advances health and fitness capabilities using Apple Intelligence",
+      "source": "apple",
+      "at": "2026-09-12T17:29:49.792Z"
+    },
+    "05166c02badc8a48": {
+      "slug": "el-reto-del-rendimiento-como-convertir-la-ia-en-inteligencia-util-05166c",
+      "title": "The yield imperative: Turning AI infrastructure into useful intelligence",
+      "source": "microsoft",
+      "at": "2026-09-12T17:29:58.335Z"
+    },
+    "3c9104f14a237998": {
+      "slug": "microsoft-cierra-su-ano-fiscal-transformado-por-la-ia-empresarial-3c9104",
+      "title": "Looking back on Microsoft’s FY26: From AI experimentation to Frontier Transformation",
+      "source": "microsoft",
+      "at": "2026-09-12T17:30:06.526Z"
+    },
+    "bfd854806ca81e5c": {
+      "slug": "microsoft-presenta-project-perception-seguridad-impulsada-por-agentes-bfd854",
+      "title": "Rethinking security for the age of AI",
+      "source": "microsoft",
+      "at": "2026-09-12T17:30:13.312Z"
+    },
+    "12e9dd6851803557": {
+      "slug": null,
+      "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "source": "openai",
+      "at": "2026-09-12T17:30:15.423Z"
+    },
+    "c3aa33826442d0f0": {
+      "slug": "devin-potencia-su-capacidad-de-pruebas-con-gpt-6-astra-c3aa33",
+      "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+      "source": "openai",
+      "at": "2026-09-12T17:30:21.049Z"
+    },
+    "c7d3c8aeae425678": {
+      "slug": "como-openai-escalo-su-infraestructura-para-1-000-millones-de-usuarios-c7d3c8",
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+      "source": "openai",
+      "at": "2026-09-12T17:30:27.495Z"
+    },
+    "333fc9c03185fdca": {
+      "slug": "samsung-se-alia-con-mistral-ai-para-revolucionar-el-diseno-de-chips-333fc9",
+      "title": "Samsung and Mistral AI Announce Strategic Partnership for Intelligence-Driven Semiconductor Infrastructure",
+      "source": "samsung",
+      "at": "2026-09-12T17:30:34.887Z"
+    },
+    "24250148f637aded": {
+      "slug": "galaxy-z-fold8-samsung-logra-el-movil-plegable-mas-ligero-del-mundo-co-242501",
+      "title": "From 253 Grams to 201 Grams: The Engineering Behind the World’s Lightest Fold",
+      "source": "samsung",
+      "at": "2026-09-12T17:30:43.490Z"
+    },
+    "1fc754bb849e520a": {
+      "slug": "meta-lanza-muse-su-agente-de-ia-personal-para-tareas-del-dia-a-dia-1fc754",
+      "title": "Introducing Muse: The World’s First Personal AI Agent Built for Everyone",
+      "source": "meta",
+      "at": "2026-09-12T17:30:52.658Z"
+    },
+    "6479988bdec48794": {
+      "slug": "samsung-y-asml-refuerzan-su-alianza-para-revolucionar-la-fabricacion-d-647998",
+      "title": "Samsung Electronics and ASML Expand Strategic Collaboration for Next-Generation Semiconductor Manufacturing",
+      "source": "samsung",
+      "at": "2026-09-12T17:30:59.449Z"
+    },
+    "e6ffc0dd89548702": {
+      "slug": "whatsapp-anade-pagos-de-facturas-en-india-para-simplificar-el-hogar-e6ffc0",
+      "title": "Launching Bill Payments in India, Enabling People to Pay Everyday Household Bills Directly on WhatsApp",
+      "source": "meta",
+      "at": "2026-09-12T17:31:06.244Z"
+    },
+    "351225917769affd": {
+      "slug": "meta-muestra-los-servidores-que-impulsan-su-ia-del-futuro-351225",
+      "title": "Inside Meta’s Infrastructure Lab",
+      "source": "meta",
+      "at": "2026-09-12T17:31:12.629Z"
+    },
+    "d331aa34fbe2aadc": {
+      "slug": null,
+      "title": "Bajar la tapa al tirar de la cadena no es la solución definitiva: esto es lo que dice la ciencia sobre los aerosoles del inodoro",
+      "source": "xataka",
+      "at": "2026-09-12T17:31:18.976Z"
+    },
+    "8dd40ffbc774cb6e": {
+      "slug": null,
+      "title": "Sylvan Esso think you should splurge on good-quality yogurt",
+      "source": "theverge",
+      "at": "2026-09-12T17:31:20.410Z"
+    },
+    "e0b31343cc6c346e": {
+      "slug": null,
+      "title": "Nepal tiene una nueva atracción en Google Maps. La casa verde que sobrevivió a la riada cuyo secreto está enterrado bajo tierra",
+      "source": "xataka",
+      "at": "2026-09-12T17:31:26.846Z"
+    },
+    "63c0cf89a6d3bd7f": {
+      "slug": "anthropic-frena-en-seco-su-ceo-pide-ralentizar-el-desarrollo-de-ia-63c0cf",
+      "title": "Anthropic CEO says it’s time to pump the brakes on AI",
+      "source": "theverge",
+      "at": "2026-09-12T17:31:32.933Z"
+    },
+    "72721fd013656572": {
+      "slug": null,
+      "title": "En 1987, Costa Rica había perdido la mitad de su bosque. Hoy es el ejemplo mundial en revertir la deforestación",
+      "source": "xataka",
+      "at": "2026-09-12T17:31:38.735Z"
+    },
+    "7658eb64cf663b96": {
+      "slug": null,
+      "title": "Anthropic CEO outlines plan to ‘pace the frontier’",
+      "source": "techcrunch",
+      "at": "2026-09-12T17:31:40.093Z"
+    },
+    "c4e81d044113c8d1": {
+      "slug": "lg-responde-a-las-acusaciones-de-vigilancia-en-sus-televisores-c4e81d",
+      "title": "LG responds to TV spying allegations",
+      "source": "theverge",
+      "at": "2026-09-12T17:31:46.165Z"
+    },
+    "07e30d1ae0c54331": {
+      "slug": null,
+      "title": "Revolut confirms customer data breach through fake government requests",
+      "source": "techcrunch",
+      "at": "2026-09-12T17:31:48.285Z"
+    },
+    "fad5f970d0508fcb": {
+      "slug": "mecka-ai-se-acerca-a-una-valoracion-de-500m-en-ronda-liderada-por-sequ-fad5f9",
+      "title": "Mecka AI nears $500M valuation in Sequoia-led deal amid rush for robot training data",
+      "source": "techcrunch",
+      "at": "2026-09-12T17:31:53.518Z"
+    },
+    "ca5eed332c345d24": {
+      "slug": null,
+      "title": "Introducing Amazon EBS Volume Clones across AWS accounts",
+      "source": "aws",
+      "at": "2026-09-12T17:31:55.563Z"
+    },
+    "eda445f3a1874f18": {
+      "slug": "aws-trae-claude-fable-5-1-nuevos-chips-y-mas-novedades-al-cloud-eda445",
+      "title": "AWS Weekly Roundup: Claude Fable 5.1 on AWS, Amazon Linux 2027 preview, AWS Certified AI Business Strategist, and more (September 7, 2026)",
+      "source": "aws",
+      "at": "2026-09-12T17:32:03.843Z"
+    },
+    "d959127de7d9e45c": {
+      "slug": "aws-lanza-los-servidores-r9g-y-r9gd-con-procesadores-graviton5-d95912",
+      "title": "Amazon EC2 R9g and R9gd instances powered by AWS Graviton5 processors are now generally available",
+      "source": "aws",
+      "at": "2026-09-12T17:32:12.455Z"
+    },
+    "17bd6de56b1e7e16": {
+      "slug": "la-fibra-ultrarrapida-supera-a-nuestros-dispositivos-17bd6d",
+      "title": "Por primera vez, la fibra corre más que nuestro hardware. Tener más de 1 Gbps nos exige pasar por caja",
+      "source": "xatakamovil",
+      "at": "2026-09-12T17:32:21.546Z"
+    },
+    "9ea59eb55bc73e7f": {
+      "slug": "anthropic-propone-un-plan-para-regular-el-desarrollo-de-la-ia-9ea59e",
+      "title": "Anthropic's CEO proposes a three-step plan to curb AI development",
+      "source": "engadget",
+      "at": "2026-09-12T17:32:27.636Z"
+    },
+    "fb2c7eb816fdd96d": {
+      "slug": "ios-17-permite-compartir-tu-ubicacion-con-mayor-flexibilidad-fb2c7e",
+      "title": "How to share your iPhone's location for just as long as you need",
+      "source": "engadget",
+      "at": "2026-09-12T17:32:34.936Z"
+    },
+    "4e0a4eadf6657526": {
+      "slug": "merece-la-pena-una-vpn-gratuita-descubre-por-que-puede-ser-arriesgada-4e0a4e",
+      "title": "Is a free VPN worth using? Here's why it could be risky",
+      "source": "engadget",
+      "at": "2026-09-12T17:32:41.690Z"
+    },
+    "fb5071c6fbd4245f": {
+      "slug": "android-auto-lee-mensajes-en-voz-alta-como-evitar-que-lo-haga-con-pasa-fb5071",
+      "title": "Android Auto lee tus mensajes en voz alta delante de quien sea: cómo desactivarlo cuando llevas pasajeros",
+      "source": "xatakamovil",
+      "at": "2026-09-12T17:32:49.207Z"
+    },
+    "c9556301bd92c146": {
+      "slug": "o2-lanza-o2-estrena-para-cambiar-de-movil-cada-dos-anos-c95563",
+      "title": "O2 tiene una nueva ventaja para sus clientes: ahora puedes estrenar móvil nuevo cada dos años",
+      "source": "xatakamovil",
+      "at": "2026-09-12T17:32:56.269Z"
+    },
+    "55f9974596857bc2": {
+      "slug": "un-ingeniero-gasta-4-000-dolares-en-un-perro-robot-chino-55f997",
+      "title": "I spent $4,000 on a robot dog from China",
+      "source": "arstechnica",
+      "at": "2026-09-12T17:33:03.379Z"
+    },
+    "4fb7c0b8bdda9ea1": {
+      "slug": "isar-aerospace-logra-su-primer-lanzamiento-orbital-con-exito-4fb7c0",
+      "title": "Some satellite companies still have an appetite for boutique launch services",
+      "source": "arstechnica",
+      "at": "2026-09-12T17:33:10.799Z"
+    },
+    "d7b2f7525c3f51ed": {
+      "slug": "los-juegos-evolucionan-recompensas-al-azar-desafian-la-teoria-clasica-d7b2f7",
+      "title": "Random rewards enrich classic game-theory insights",
+      "source": "arstechnica",
+      "at": "2026-09-12T17:33:17.126Z"
+    },
+    "5a337a8ee7c5ed70": {
+      "slug": "beyond-wukong-la-serie-china-generada-totalmente-con-ia-que-arrasa-en-5a337a",
+      "title": "Esta serie hecha con IA está arrasando en el horario estelar de la televisión china",
+      "source": "hipertextual",
+      "at": "2026-09-12T17:33:25.266Z"
+    },
+    "c4d36f0acb8cf787": {
+      "slug": "iphone-duo-el-movil-plegable-que-nadie-puede-permitirse-comprar-c4d36f",
+      "title": "I’ve never wanted a phone as much as the iPhone Duo, but at $2,000, I just can't go there — and I'm left wondering who's going to buy Apple's remarkable-looking foldable",
+      "source": "techradar",
+      "at": "2026-09-12T17:33:34.367Z"
+    },
+    "86034bd35738bd04": {
+      "slug": null,
+      "title": "Apple nailed iPhone Duo split screen, even as iPad multitasking feels convoluted",
+      "source": "9to5mac",
+      "at": "2026-09-12T17:33:36.502Z"
+    },
+    "1394f2881c6a187f": {
+      "slug": "sudafrica-frena-nuevos-centros-de-datos-por-escasez-de-agua-y-electric-1394f2",
+      "title": "South Africans join Thais and Americans in rejecting data centers as clashes over water and power resources mount",
+      "source": "techradar",
+      "at": "2026-09-12T17:33:44.353Z"
+    },
+    "de119b9d771ece46": {
+      "slug": "apple-presenta-el-iphone-duo-plegable-iphone-18-pro-y-nuevos-wearables-de119b",
+      "title": "Top Stories: Apple Event Recap With iPhone Duo, iPhone 18 Pro, Apple Watch, and AirPods",
+      "source": "macrumors",
+      "at": "2026-09-12T17:33:51.090Z"
+    },
+    "51065e2c55513337": {
+      "slug": "microsoft-facilita-crear-apps-para-windows-11-con-ia-en-menos-de-una-h-51065e",
+      "title": "Esta herramienta te ayuda a desarrollar apps de Windows en 30 minutos (y es gratis)",
+      "source": "hipertextual",
+      "at": "2026-09-12T17:33:58.963Z"
+    },
+    "1ae3379ebc3429fb": {
+      "slug": "boulies-master-rex-2026-la-silla-gaming-que-sorprende-por-versatilidad-1ae337",
+      "title": "“Not even Secretlab’s Titan Evo has these”: I’ve never tested a gaming chair with features like this Boulies model — and it beats key rivals on price, too",
+      "source": "techradar",
+      "at": "2026-09-12T17:34:08.044Z"
+    },
+    "ec66461aaa9a9e20": {
+      "slug": "esr-se-prepara-para-los-nuevos-iphone-con-accesorios-para-la-era-plega-ec6646",
+      "title": "ESR’s iPhone accessory lineup is ready for Apple’s foldable era",
+      "source": "9to5mac",
+      "at": "2026-09-12T17:34:15.002Z"
+    },
+    "34dedebddfe83d1e": {
+      "slug": "iphone-duo-anade-un-borde-virtual-en-la-pantalla-exterior-para-mejorar-34dede",
+      "title": "iPhone Duo can add fake bezel to the outside screen for better case compatibility",
+      "source": "9to5mac",
+      "at": "2026-09-12T17:34:21.177Z"
+    },
+    "d9867e6a127dd85f": {
+      "slug": "tensor-necesita-su-propio-momento-ryzen-para-despegar-d9867e",
+      "title": "The Google Pixel is fine and all, but still needs a ‘Ryzen moment’ [Video]",
+      "source": "9to5google",
+      "at": "2026-09-12T17:34:28.076Z"
+    },
+    "f64d4fba3196f997": {
+      "slug": "iran-y-houthis-usaron-claude-de-anthropic-para-atacar-barcos-estadouni-f64d4f",
+      "title": "Iran and Houthi rebels used Anthropic's Claude AI to target US warships and build hypersonic missiles — Houthi rebels also used the bot to code ballistic missile guidance systems",
+      "source": "tomshardware",
+      "at": "2026-09-12T17:34:35.135Z"
+    },
+    "b95bc69485d3f46b": {
+      "slug": "novocaine-jack-quaid-lleva-al-cine-una-comedia-de-accion-desatada-b95bc6",
+      "title": "Esta película de acción con la estrella de ‘The Boys’ es una locura gamberra que te encantará",
+      "source": "hipertextual",
+      "at": "2026-09-12T17:34:43.984Z"
+    },
+    "0dfdca4f95394e18": {
+      "slug": "un-supervisor-de-aduanas-detenido-por-robar-procesadores-intel-a-orden-0dfdca",
+      "title": "US Customs supervisor busted for stealing Core i7 CPUs, RAM, and hard drives from Homeland Security PCs, damage estimated at $105,800 — stolen tech swapped with inferior hardware and cashed out on Newegg",
+      "source": "tomshardware",
+      "at": "2026-09-12T17:34:50.835Z"
+    },
+    "362cf8f7dcafb90e": {
+      "slug": "consiguen-traer-a-tarjetas-rtx-40-la-tecnologia-exclusiva-de-rtx-50-362cf8",
+      "title": "We tested unofficial DLSS Multi Frame Generation support on RTX 40-series GPUs — new mod brings RTX 50-series exclusive feature to older cards, and it really works",
+      "source": "tomshardware",
+      "at": "2026-09-12T17:34:58.697Z"
+    },
+    "310a02b062f348a0": {
+      "slug": "retrasos-en-la-entrega-del-iphone-18-pro-que-esperar-si-no-lo-pediste-310a02",
+      "title": "Didn't Pre-Order iPhone 18 Pro Yet? Here's How Long the Wait is Now",
+      "source": "macrumors",
+      "at": "2026-09-12T17:35:06.111Z"
+    },
+    "0da66d04cce4148b": {
+      "slug": "el-acuerdo-de-nvidia-y-groq-llama-la-atencion-de-la-justicia-estadouni-0da66d",
+      "title": "Nvidia's Groq acquihire is on the DOJ's radar, but it's already too late",
+      "source": "theregister",
+      "at": "2026-09-12T17:35:15.139Z"
+    },
+    "9efe4b414161ffea": {
+      "slug": "dbrand-lanza-mnml-fundas-para-pixel-11-pro-sin-adornos-9efe4b",
+      "title": "Hands-on: Dbrand’s MNML Pixel 11 Pro cases are simply  good, and that’s the point [Gallery]",
+      "source": "9to5google",
+      "at": "2026-09-12T17:35:21.792Z"
+    },
+    "9391bf3cdeeae707": {
+      "slug": "ya-puedes-reservar-el-iphone-18-pro-y-pro-max-9391bf",
+      "title": "iPhone 18 Pro and iPhone 18 Pro Max Now Available to Pre-Order",
+      "source": "macrumors",
+      "at": "2026-09-12T17:35:29.454Z"
+    }
+  },
+  "titles": {
+    "0f4dda4d3258e065": true,
+    "048d45e043be7ee6": true,
+    "cf06d89e9bc38774": true,
+    "b9a0a7716b5c15b7": true,
+    "b9b115dbea12b2f2": true,
+    "af49e3c3dc08c367": true,
+    "96e5e93bbf031739": true,
+    "612f799057e34238": true,
+    "5a7195611d384c9f": true,
+    "688b53e8d1b3b1d8": true,
+    "857bc897a0859d44": true,
+    "1edcd1dd3d23c000": true,
+    "29f49277a9f6381e": true,
+    "187a5c3a2001e9b9": true,
+    "99a2ba30c1cc1dd1": true,
+    "4a7df76c94794911": true,
+    "3859b7bbdf36d6ed": true,
+    "e7020d5e9cec2128": true,
+    "6edfbc2124c2f886": true,
+    "9fbc5cbd5bf38478": true,
+    "51d9673c05228f50": true,
+    "fce5923f9c846957": true,
+    "5c02c10e55d0e76c": true,
+    "9417d6296bb2ad09": true,
+    "b24b6f0c7e607192": true,
+    "ea8e8468326f534e": true,
+    "4d425b3df93307f4": true,
+    "70b3ca06555d5cb6": true,
+    "5af5d099ae976886": true,
+    "918b11b2e94c0daf": true,
+    "fff63caf80492ad4": true,
+    "6313c0e401d749c0": true,
+    "f00f5ae8da110484": true,
+    "d277a6cdf181526d": true,
+    "a795f67219b88953": true,
+    "df290bbacac1dc90": true,
+    "6000c87c88912f8d": true,
+    "8b1d5fa38fc67c43": true,
+    "498a5b7092870de0": true,
+    "7d3a7d0330cfd63c": true,
+    "96e9359ddc0c7954": true,
+    "402dc820f6ad344b": true,
+    "d38b1d5d82fcbecf": true,
+    "2f50fdca2c62d175": true,
+    "d2dab559c3412379": true,
+    "5072a4192d16fddf": true,
+    "518f389f8d96bf18": true,
+    "7923943637ec60bf": true,
+    "a72f58242da53c48": true,
+    "c74405dbab97b71f": true,
+    "a54fe93839ea7dc4": true,
+    "88dc3fdd544cb327": true,
+    "98e99c9b26763c18": true,
+    "c9ab08716189a79f": true,
+    "ed4d97fec0e8fd78": true,
+    "1eaad1c2d60a93e5": true,
+    "bd332d5a5846baeb": true,
+    "b3788cbf10390904": true,
+    "6c758fd4efd63276": true,
+    "13d762ec4e090329": true
+  }
 }
