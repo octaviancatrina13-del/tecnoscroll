@@ -25,7 +25,7 @@ El sitio ya trae **artículos de ejemplo** para que veas el diseño sin configur
 | Variable | Para qué | Obligatoria |
 |---|---|---|
 | `ANTHROPIC_API_KEY` | Reescribir los artículos | Sí (para el pipeline) |
-| `ANTHROPIC_MODEL` | Modelo de Claude (por defecto `claude-sonnet-5`) | No |
+| `ANTHROPIC_MODEL` | Modelo de Claude (por defecto `claude-haiku-4-5`) | No |
 | `UNSPLASH_ACCESS_KEY` | Imágenes | Recomendada |
 | `PEXELS_API_KEY` | Imágenes (reserva) | Recomendada |
 | `MAX_ARTICLES_PER_RUN` | Límite por ejecución (coste) | No (12) |

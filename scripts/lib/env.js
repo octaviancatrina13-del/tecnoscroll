@@ -17,9 +17,9 @@ export const PATHS = {
 
 export const ENV = {
   anthropicKey: process.env.ANTHROPIC_API_KEY || '',
-  anthropicModel: process.env.ANTHROPIC_MODEL || 'claude-sonnet-5',
+  anthropicModel: process.env.ANTHROPIC_MODEL || 'claude-haiku-4-5',
   unsplashKey: process.env.UNSPLASH_ACCESS_KEY || '',
   pexelsKey: process.env.PEXELS_API_KEY || '',
-  maxArticles: Number(process.env.MAX_ARTICLES_PER_RUN || '12'),
+  maxArticles: Number(process.env.MAX_ARTICLES_PER_RUN || '45'),
   outputLang: process.env.OUTPUT_LANG || 'es',
 };
