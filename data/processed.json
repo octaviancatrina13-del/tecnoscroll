@@ -2519,6 +2519,276 @@
       "title": "Google finally sets a date for Googlebook pre-orders",
       "source": "androidauth",
       "at": "2026-09-15T03:51:33.849Z"
+    },
+    "00e29a681a6f5e3b": {
+      "slug": null,
+      "title": "New insights from Google’s AI & Economy ATLAS",
+      "source": "google",
+      "at": "2026-09-15T13:12:28.946Z"
+    },
+    "a8082717e0a77ae9": {
+      "slug": null,
+      "title": "Widow’s Bay triumphs as most decorated freshman comedy in Emmy history",
+      "source": "apple",
+      "at": "2026-09-15T13:12:30.333Z"
+    },
+    "1537042228c92a19": {
+      "slug": null,
+      "title": "Heart of the Matter: How a Major Children’s Hospital Uses Open Source NVIDIA AI for Cardiac Care",
+      "source": "nvidia",
+      "at": "2026-09-15T13:12:31.720Z"
+    },
+    "2e155b11d8093d3e": {
+      "slug": "gpt-6-astra-el-modelo-de-ia-mas-potente-de-openai-hasta-la-fecha-2e155b",
+      "title": "Safety overview: GPT-6 Astra",
+      "source": "openai",
+      "at": "2026-09-15T13:12:37.405Z"
+    },
+    "b07b0b2b4d66deed": {
+      "slug": "un-evento-de-motos-ahorra-dias-de-trabajo-gracias-a-chatgpt-b07b0b",
+      "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+      "source": "openai",
+      "at": "2026-09-15T13:12:44.181Z"
+    },
+    "3b5f2688fec1191a": {
+      "slug": "empresas-nativas-en-ia-transforman-procesos-en-ventaja-operativa-3b5f26",
+      "title": "How AI-native companies turn workflows into operating capability",
+      "source": "openai",
+      "at": "2026-09-15T13:12:51.553Z"
+    },
+    "71c9cee8bcb7e758": {
+      "slug": "my-fancam-la-ia-de-samsung-que-sigue-automaticamente-a-tu-persona-favo-71c9ce",
+      "title": "[Interview] The People Behind the Galaxy Z Series’ Camera Innovations ①: How My FanCam Keeps Favorite People in Focus",
+      "source": "samsung",
+      "at": "2026-09-15T13:12:59.421Z"
+    },
+    "ce2443538928e254": {
+      "slug": "samsung-arrasa-en-los-premios-internacionales-de-diseno-2026-ce2443",
+      "title": "Samsung’s Human-Centered Design Wins IDEA and Red Dot Design Award 2026",
+      "source": "samsung",
+      "at": "2026-09-15T13:13:06.332Z"
+    },
+    "71be954a129d9937": {
+      "slug": "samsung-imagina-un-futuro-de-salud-mas-simple-y-conectado-con-ia-71be95",
+      "title": "[Video] [Galaxy Unpacked July 2026] Samsung Health Envisions Simpler, More Connected Care With AI",
+      "source": "samsung",
+      "at": "2026-09-15T13:13:12.998Z"
+    },
+    "5087549d29218a77": {
+      "slug": "apple-de-una-frontera-mental-a-la-normalidad-de-los-1-000-euros-508754",
+      "title": "Hace años los móviles de más de 1.000 euros nos parecían un disparate. Hoy Apple solo tiene un modelo por debajo de ese precio",
+      "source": "xataka",
+      "at": "2026-09-15T13:13:20.989Z"
+    },
+    "a671e6c21dffeb5c": {
+      "slug": "exmiembro-de-anthropic-lanza-startup-para-controlar-agentes-ia-a671e6",
+      "title": "Early Anthropic hire, former METR COO have found a way to rein in rogue AI agents",
+      "source": "techcrunch",
+      "at": "2026-09-15T13:13:26.520Z"
+    },
+    "9c65712af7cda98d": {
+      "slug": "spotify-permite-a-padres-excluir-musica-infantil-de-wrapped-9c6571",
+      "title": "Spotify finally lets parents exclude kids’ music from Wrapped and recommendations",
+      "source": "techcrunch",
+      "at": "2026-09-15T13:13:32.654Z"
+    },
+    "2b4d8af0fc59435f": {
+      "slug": "voicemod-key-pocket-cambiar-la-voz-en-tiempo-real-en-tu-movil-2b4d8a",
+      "title": "Voicemod’s new pocket-friendly device brings real-time voice changing to your phone",
+      "source": "theverge",
+      "at": "2026-09-15T13:13:38.155Z"
+    },
+    "45d213fc779febc0": {
+      "slug": "los-airpods-5-premium-los-mejores-auriculares-abiertos-de-apple-45d213",
+      "title": "The premium AirPods 5 are the best open-ear earbuds Apple has made",
+      "source": "theverge",
+      "at": "2026-09-15T13:13:44.967Z"
+    },
+    "73e40e3c84a39d3b": {
+      "slug": "samsung-rebaja-sus-moviles-galaxy-s26-y-plegables-z-fold8-en-la-tienda-73e40e",
+      "title": "Las mejores ofertas de Samsung en sus móviles Galaxy S26 y Z Fold8: así es la nueva oleada de descuentos en la tienda oficial",
+      "source": "xataka",
+      "at": "2026-09-15T13:13:52.631Z"
+    },
+    "094053b571509a9f": {
+      "slug": null,
+      "title": "\"Estadio reparado, barrio arruinado\": tras un mes y 1.700 terremotos, más de 200 personas siguen fuera de su hogar en Granada",
+      "source": "xataka",
+      "at": "2026-09-15T13:14:01.160Z"
+    },
+    "9243b88af1757283": {
+      "slug": "la-startup-italiana-exein-logra-los-1-700-millones-de-valoracion-9243b8",
+      "title": "New Italian unicorn Exein rides the physical AI wave",
+      "source": "techcrunch",
+      "at": "2026-09-15T13:14:07.169Z"
+    },
+    "f74e55537efa9339": {
+      "slug": "general-motors-moderniza-el-software-de-sus-camionetas-f74e55",
+      "title": "GM updates its trucks’ native software to coexist with CarPlay",
+      "source": "theverge",
+      "at": "2026-09-15T13:14:13.938Z"
+    },
+    "2201f2a46a3c81d2": {
+      "slug": "alemania-lanza-d-you-su-cartera-digital-europea-espana-aun-espera-2201f2",
+      "title": "Europa quiere que dejemos la cartera física en casa. Mientras España da forma a la cartera digital, Alemania le ha puesto cara a la suya",
+      "source": "xatakamovil",
+      "at": "2026-09-15T13:14:21.386Z"
+    },
+    "e9d84681e5a44910": {
+      "slug": "magsafe-ventajas-y-desventajas-de-cargar-tu-iphone-e9d846",
+      "title": "The pros and cons of using a MagSafe charger",
+      "source": "engadget",
+      "at": "2026-09-15T13:14:27.476Z"
+    },
+    "c02fa03a6de4451f": {
+      "slug": "spotify-te-permite-aislar-la-musica-infantil-de-tus-recomendaciones-c02fa0",
+      "title": "Spotify can now exclude your kids' music taste from recommendations",
+      "source": "engadget",
+      "at": "2026-09-15T13:14:33.766Z"
+    },
+    "dd448b403f50b931": {
+      "slug": null,
+      "title": "Uber expands options for riders with seniors accounts",
+      "source": "engadget",
+      "at": "2026-09-15T13:14:35.611Z"
+    },
+    "b6aa21ae8a2f174d": {
+      "slug": null,
+      "title": "This Atlantic hurricane season is about to do something that hasn't happened in 175 years",
+      "source": "arstechnica",
+      "at": "2026-09-15T13:14:41.025Z"
+    },
+    "0468a5f56e3bf5fc": {
+      "slug": "telefonica-retoma-negociaciones-para-comprar-vodafone-espana-0468a5",
+      "title": "La posible venta de Vodafone España a Telefónica vuelve a estar sobre la mesa. Y ahora tiene más sentido que nunca",
+      "source": "xatakamovil",
+      "at": "2026-09-15T13:14:47.990Z"
+    },
+    "c2297ec081db00dc": {
+      "slug": "los-modelos-ia-abiertos-cierran-la-brecha-con-las-versiones-premium-en-c2297e",
+      "title": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "source": "arstechnica",
+      "at": "2026-09-15T13:14:55.211Z"
+    },
+    "6008e9144aaf5ee7": {
+      "slug": "movistar-revela-como-conseguir-el-router-smart-wifi-7-sin-pagar-60-eur-6008e9",
+      "title": "Movistar confirma cuáles son los requisitos que debes cumplir para conseguir el nuevo router Smart WiFi 7 gratis",
+      "source": "xatakamovil",
+      "at": "2026-09-15T13:15:02.804Z"
+    },
+    "1e67ea309e5934e5": {
+      "slug": "volvo-potencia-las-baterias-del-xc60-y-xc90-para-2028-1e67ea",
+      "title": "Volvo increases the batteries for 2028 XC60 and XC90 plug-in refresh",
+      "source": "arstechnica",
+      "at": "2026-09-15T13:15:09.629Z"
+    },
+    "5feaee49e5b6c078": {
+      "slug": "agentes-de-openai-atacaron-rubygems-con-miles-de-paquetes-maliciosos-5feaee",
+      "title": "RubyGems say OpenAI agents responsible for undisclosed swarm attack against its infrastructure",
+      "source": "techradar",
+      "at": "2026-09-15T13:15:16.348Z"
+    },
+    "a0d025d35af3cdb1": {
+      "slug": null,
+      "title": "I've watched all 8 episodes of Reacher spinoff Neagley and think longtime fans will love it — mostly because they feel like the exact same show",
+      "source": "techradar",
+      "at": "2026-09-15T13:15:23.802Z"
+    },
+    "f010dd38a1c13652": {
+      "slug": null,
+      "title": "10 Best Meal Delivery Services, Tested by an Ex-Restaurant Critic",
+      "source": "wired",
+      "at": "2026-09-15T13:15:25.533Z"
+    },
+    "a90a149d83614b9c": {
+      "slug": null,
+      "title": "Which new Apple products will launch this year – and which won’t?",
+      "source": "9to5mac",
+      "at": "2026-09-15T13:15:26.559Z"
+    },
+    "fa610c4fe7de10d5": {
+      "slug": "spotify-anade-un-control-para-que-la-musica-infantil-no-afecte-tus-rec-fa610c",
+      "title": "Spotify’s new toggle can keep kids music out of your recommendations and Wrapped",
+      "source": "androidauth",
+      "at": "2026-09-15T13:15:32.580Z"
+    },
+    "e4314d50ac29112e": {
+      "slug": "spotify-te-permite-bloquear-la-musica-infantil-de-tus-recomendaciones-e4314d",
+      "title": "Spotify is finally giving you a button to block kids’ music from your recommendations and Wrapped — now YouTube needs to follow suit",
+      "source": "techradar",
+      "at": "2026-09-15T13:15:39.408Z"
+    },
+    "717907b78606ea74": {
+      "slug": "fleet-participa-en-el-proyecto-de-ia-de-anthropic-para-mejorar-la-segu-717907",
+      "title": "Fleet Device Management joins Anthropic’s Project Glasswing to research AI-powered endpoint security",
+      "source": "9to5mac",
+      "at": "2026-09-15T13:15:44.889Z"
+    },
+    "e83253b1c0f087ba": {
+      "slug": "anthropic-y-openai-buscan-que-el-gobierno-las-salve-con-regulacion-de-e83253",
+      "title": "Anthropic and OpenAI look to Uncle Sam to make them too big to fail",
+      "source": "theregister",
+      "at": "2026-09-15T13:15:52.835Z"
+    },
+    "25242d76143c9638": {
+      "slug": "spotify-permite-excluir-la-musica-infantil-de-tu-perfil-25242d",
+      "title": "Spotify Now Lets You Keep Kids' Music Out of Your Wrapped",
+      "source": "macrumors",
+      "at": "2026-09-15T13:15:59.177Z"
+    },
+    "5255529364bc9d39": {
+      "slug": "bill-gates-alerta-los-gobiernos-no-estan-preparados-para-la-ia-525552",
+      "title": "Bill Gates compares AI to alien intelligence in movies where ‘magically the US and China’ solve the problem together — warns world governments that they’re not ready for AI",
+      "source": "tomshardware",
+      "at": "2026-09-15T13:16:06.545Z"
+    },
+    "29fee416ba5b544d": {
+      "slug": "apple-tv-bate-record-con-29-premios-emmy-en-los-ultimos-premios-29fee4",
+      "title": "'Widow's Bay' Leads Apple TV to Record 29 Emmy Wins",
+      "source": "macrumors",
+      "at": "2026-09-15T13:16:14.088Z"
+    },
+    "0f4db773614bba63": {
+      "slug": "descubierto-un-sencillo-truco-para-evitar-la-cuenta-microsoft-en-windo-0f4db7",
+      "title": "Microsoft account refuseniks have another way of installing Windows",
+      "source": "theregister",
+      "at": "2026-09-15T13:16:21.083Z"
+    },
+    "5f7840e9565f3074": {
+      "slug": "usas-ia-para-crear-tonos-de-llamada-una-encuesta-revela-sorpresas-5f7840",
+      "title": "Survey says there’s a good chance you’re intrigued by this novel AI use case",
+      "source": "androidauth",
+      "at": "2026-09-15T13:16:27.066Z"
+    },
+    "885a3944c5949d7f": {
+      "slug": "samsung-galaxy-a08-4g-el-sucesor-del-movil-mas-vendido-con-bateria-mas-885a39",
+      "title": "This global Android bestseller gets a successor with a bigger battery",
+      "source": "androidauth",
+      "at": "2026-09-15T13:16:33.428Z"
+    },
+    "05a60394a22dd8a8": {
+      "slug": "apple-watch-enfrenta-desafios-legales-por-sus-nuevas-funciones-de-audi-05a603",
+      "title": "New Apple Watch features may require new legal precedent for privacy",
+      "source": "9to5mac",
+      "at": "2026-09-15T13:16:39.895Z"
+    },
+    "ecae9886bc29150a": {
+      "slug": "eeuu-confirma-que-ha-desplegado-armas-en-el-espacio-orbital-ecae98",
+      "title": "US confirms it has weapons in spaaaaaace",
+      "source": "theregister",
+      "at": "2026-09-15T13:16:47.809Z"
+    },
+    "78fb7f6018799cbe": {
+      "slug": "openai-contrata-cientos-de-revisores-para-leer-conversaciones-de-chatg-78fb7f",
+      "title": "ChatGPT transcripts are reportedly read by humans to improve responses, including those with personal information — 'Project Lilly' has seen OpenAI hire hundreds of contractors to manually review logs",
+      "source": "tomshardware",
+      "at": "2026-09-15T13:16:54.122Z"
+    },
+    "bdae3e711e3daf6a": {
+      "slug": "realme-lanza-el-movil-especial-de-harry-potter-edicion-limitada-para-f-bdae3e",
+      "title": "realme acaba de lanzar el teléfono perfecto para todos los fans de Harry Potter",
+      "source": "hipertextual",
+      "at": "2026-09-15T13:17:00.383Z"
     }
   },
   "titles": {
@@ -2941,6 +3211,51 @@
     "193ddcaa06d00593": true,
     "c4b7b0679fe73120": true,
     "ebdd865474f4a440": true,
-    "9697063c56fa706b": true
+    "9697063c56fa706b": true,
+    "7cee0f89f345afc9": true,
+    "5172053e02ce5c90": true,
+    "4fba76d407fffed6": true,
+    "1ea2aa93ef0550cb": true,
+    "4a8edbc1dfec8898": true,
+    "c235a8fe8dc88376": true,
+    "13d1f5c4a89c8f35": true,
+    "e08a1ae9021e5de2": true,
+    "27bf61aafffa40cd": true,
+    "ae76db7c8ba05954": true,
+    "44c4e1f2222daf4d": true,
+    "1e51eabb6a73f6da": true,
+    "ff05c391e8cc3b26": true,
+    "c46ae9a758d550f6": true,
+    "c9d1136b26663cf8": true,
+    "eee63221d5a3c4b2": true,
+    "bcc1646d626a3e62": true,
+    "1ff1c26204e72394": true,
+    "af7a491fa220f97c": true,
+    "db6f09dd243cacfa": true,
+    "02dc920735c24d3e": true,
+    "a37c78a9ab87604b": true,
+    "59ccbccbc63275cc": true,
+    "c6a49ab42e597149": true,
+    "bc3b099c25e23eff": true,
+    "e63c634e8b4c67bc": true,
+    "700862f23f2e1699": true,
+    "13fe68bc26b1a074": true,
+    "1ec81a0f59d53d2e": true,
+    "41e3b29b557595e7": true,
+    "e88372a3cf64bcb0": true,
+    "464b95ec7eb891aa": true,
+    "cd3e56e0416887f4": true,
+    "de29408f3adab3e9": true,
+    "266334fd69840734": true,
+    "bb8e3466172583fc": true,
+    "478563a99ea12604": true,
+    "70a5ad678f78e891": true,
+    "12d14b9665283ab0": true,
+    "fb947944f6c7ede3": true,
+    "e7324a25d3a0ab2e": true,
+    "b2ae35880533ee12": true,
+    "dc200961c65b29d3": true,
+    "9b4549b9a5fc5dda": true,
+    "383cfcaf0fe178fe": true
   }
 }
